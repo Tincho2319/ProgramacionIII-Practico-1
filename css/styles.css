@@ -1,1 +1,19 @@
-
+:root {
+    /* Colores a usar en el body general*/
+    --fondo-oscuro: #05070a;       
+    --azul-profundo: #0d121d;     
+    --violeta-primario: #6366f1;   
+    --violeta-brillante: #8b5cf6;  
+    --texto-principal: #ffffff;
+    --texto-secundario: #94a3b8;   
+}
+body{
+   margin: 0;
+    font-family: 'Inter', sans-serif; /* Fuente principal para el header y body*/
+    background-color: var(--fondo-oscuro);
+    /* Este degradado crea el efecto de iluminación técnica */
+    background-image: radial-gradient(circle at 10% 10%, #1e1b4b 0%, transparent 40%);
+    background-attachment: fixed;
+    color: var(--texto-principal);
+    min-height: 100vh;
+}
