@@ -1,0 +1,85 @@
+:root {
+    /* Colores a usar en el body general*/
+    --fondo-oscuro: #05070a;       
+    --azul-profundo: #0d121d;     
+    --violeta-primario: #6366f1;   
+    --violeta-brillante: #8b5cf6;  
+    --texto-principal: #ffffff;
+    --texto-secundario: #94a3b8;   
+}
+
+.Presentacion {
+    background-color: var(--azul-profundo);
+    color: var(--texto-principal);
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+}
+
+.Titulo_Presentacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.texto_Titulo_Presentacion {
+    font-size: 48px;
+    margin: 0;
+}
+
+.texto_SubTitulo_Presentacion {
+    font-size: 24px;
+    text-align: left;
+    margin: 30px 0 20px -15px;
+}
+
+.Presentacion p {
+    justify-content: start;
+    text-align: left;
+    font-size: 15px;
+    max-width: 600px;
+    margin: 0px 0px 0px 30px;
+}
+
+.PorqueElegirnos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--fondo-oscuro);
+    color: var(--texto-principal);
+    padding: 50px;
+    text-align: center;
+}
+
+.Razones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.Razon {
+    background-color: var(--azul-profundo);
+    margin: 10px 0px 0px 30px;
+    border-radius: 20px;
+    padding: 10px;
+    width: 30%;
+    text-align: left;
+
+}
+
+.texto_Titulo_Razones {
+    font-size: 24px;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.texto_Razon{
+    font-size: 15px;
+    line-height: 25px;
+    margin: 20px 0px 0px 10px;
+}
