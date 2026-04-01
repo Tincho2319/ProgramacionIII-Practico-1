@@ -37,3 +37,10 @@ body {
     overflow: auto;
   }
 }
+
+@media (max-width: 768px) {
+  footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}

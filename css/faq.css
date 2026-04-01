@@ -324,4 +324,158 @@ nav a {
     transform: translateX(4px);
     opacity: 1;
   }
-/* Fin Enviar Pregunta */
+  /* Fin Enviar Pregunta */
+
+  /* Footer */
+  footer {
+    padding: 60px 40px;
+    color: white;
+  }
+  
+  /* Contenedor de columnas */
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+  }
+  
+  /* Texto final ocupa todo */
+  footer > p {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 40px;
+    color: #9CA3AF;
+    font-size: 0.9rem;
+  }
+
+  /* 1er Columna */
+  #descripcion-footer {
+    color: #9CA3AF;
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  /* 2da Columna */
+  #txt-enlacesRapidos {
+    color: white;
+    font-weight: bold;
+    font-size: 23px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  #txt-enlacesRapidos i {
+    color: #B5529F;
+    font-size: 20px;
+  }
+
+  footer a {
+    text-decoration: none; 
+    color: #9CA3AF;            
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  footer a:hover {
+    color: white;
+  }
+
+  footer ul {
+    list-style: none;
+  }
+
+  footer li {
+    position: relative;
+    padding-left: 33px;
+    margin: 13px;
+  }
+
+  footer li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #B5529F;
+  }
+
+  footer li:hover::before {
+    transform: scale(130%) rotate(-45deg);
+  }
+
+  /* 3er Columna */
+  #txt-contacto {
+    color: white;
+    font-weight: bold;
+    font-size: 23px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  #txt-contacto i {
+    color: #B5529F;
+    font-size: 20px;
+  }
+
+  #txt-email {
+    font-size: 15px;
+    text-decoration: none; 
+    color: #9CA3AF;            
+    font-weight: 500;
+    position: relative;
+    display: flex;
+    gap: 8px;
+  }
+
+  #txt-email i {
+    color: #B5529F;
+  }
+
+  #txt-telefono {
+    font-size: 15px;
+    text-decoration: none; 
+    color: #9CA3AF;            
+    font-weight: 500;
+    position: relative;
+    display: flex;
+    gap: 8px;
+  }
+
+  #txt-telefono i {
+    color: #B5529F;
+  }
+
+  #txt-direccion {
+    font-size: 15px;
+    text-decoration: none; 
+    color: #9CA3AF;            
+    font-weight: 500;
+    position: relative;
+    display: flex;
+    gap: 8px;
+  }
+
+  #txt-direccion i {
+    color: #B5529F;
+  }
+
+  .redes-sociales {
+    padding-right: 33px;
+    padding-top: 23px;
+    margin-right: 33px;
+    margin-top: 23px;
+    display: flex;
+    font-size: 23px;
+  }
+
+  .redes-sociales i {
+    padding: 8px;
+  }
+
+  .redes-sociales:hover {
+    color: #B5529F;
+  }
+
+
+ 
