@@ -1,1 +1,39 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  
+    background:
+      linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)),
+      url("../assets/img/fondo-test.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+    font-family: system-ui, -apple-system, sans-serif;
+    opacity: 0;
+    transform: translateY(10px);
+    overflow: hidden;
+    animation: fadeUp 3s ease forwards, enableScroll 5s linear forwards;
+  }
+  
+  main {
+    flex: 1;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeUp 3s ease forwards;
+  }
 
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+@keyframes enableScroll {
+  to {
+    overflow: auto;
+  }
+}
