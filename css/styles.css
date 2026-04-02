@@ -1,11 +1,20 @@
+/* Importar Fuente */
+@import url("https://fonts.google.com/share?selection.family=Google+Sans+Flex:opsz,wght@6..144,1..1000");
+
 /* Root Colores */
 :root {
   --color-primary: #4F46E5;    /* Morado principal */
   --color-secondary: #B5529F;  /* Rosa secundario */
-  --color-text: #FFFFFF;        /* tTexto blanco */
+  --color-text: #FFFFFF;        /* Texto blanco */
   --color-text-secondary: #9CA3AF; /* Gris para textos secundarios */
   --color-background: rgba(255, 255, 255, 0.03); /* Fondo translucido para las cards */
   --color-hover: linear-gradient(90deg, #4F46E5, #B5529F); /* Para hover */
+  --color-details: rgba(255, 255, 255, 0.08) /* Para detalles, bordes y sombras */
+}
+
+/* Aplicar Fuente */
+* {
+  font-family: 'Google Sans Flex';
 }
 
 body {
@@ -22,6 +31,7 @@ body {
     background-repeat: no-repeat;
   
     font-family: system-ui, -apple-system, sans-serif;
+    color: var(--color-text);
     opacity: 0;
     transform: translateY(10px);
     overflow: hidden;
