@@ -70,6 +70,19 @@ nav a {
   font-weight: bold;
   transition: color 0.3s ease;
 }
+
+/* Page Activa */
+nav a.active {
+    color: white; /* destacar el texto */
+    font-weight: bold;
+  }
+  
+  /* Mantener línea animada siempre visible en activo */
+  nav a.active::after {
+    width: 100%;
+    background: linear-gradient(90deg, #4F46E5, #B5529F);
+  }
+
 /* Fin Nav Center */
 
 
@@ -85,8 +98,9 @@ nav a {
   
   .words {
     display: inline-block;
+    align-items: center;
     overflow: hidden;
-    height: 1.3em;
+    height: 1.170em;
     vertical-align: bottom;
     color: #B5529F;
   }
@@ -115,7 +129,7 @@ nav a {
 }
 
 .faq-item {
-  background: linear-gradient(135deg, rgba(79,70,229,.08), rgba(181,82,159,.08));
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255,255,255,.08);
   border-radius: 16px;
   margin: 0 auto;
@@ -399,8 +413,12 @@ nav a {
     color: #B5529F;
   }
 
+  footer li::before {
+    transition: transform 0.3s ease-in-out;
+  }
+  
   footer li:hover::before {
-    transform: scale(130%) rotate(-45deg);
+    transform: scale(1.3) rotate(-45deg);
   }
 
   /* 3er Columna */

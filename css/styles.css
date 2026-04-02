@@ -1,3 +1,13 @@
+/* Root Colores */
+:root {
+  --color-primary: #4F46E5;    /* Morado principal */
+  --color-secondary: #B5529F;  /* Rosa secundario */
+  --color-text: #FFFFFF;        /* tTexto blanco */
+  --color-text-secondary: #9CA3AF; /* Gris para textos secundarios */
+  --color-background: rgba(255, 255, 255, 0.03); /* Fondo translucido para las cards */
+  --color-hover: linear-gradient(90deg, #4F46E5, #B5529F); /* Para hover */
+}
+
 body {
     margin: 0;
     min-height: 100vh;
