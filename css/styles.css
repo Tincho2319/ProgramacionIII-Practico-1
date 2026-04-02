@@ -1,23 +1,24 @@
-/* Fuente Google Sans Flex*/
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+/* Importar Fuente */
+@import url("https://fonts.google.com/share?selection.family=Google+Sans+Flex:opsz,wght@6..144,1..1000");
 
+/* Root Colores */
 :root {
-    /* Colores a usar en el body general*/
-    --fondo-oscuro: #05070a;       
-    --azul-profundo: #0d121d;     
-    --violeta-primario: #6366f1;   
-    --violeta-brillante: #8b5cf6;  
-    --texto-principal: #ffffff;
-    --texto-secundario: #94a3b8;   
+  --color-primary: #4F46E5;    /* Morado principal */
+  --color-secondary: #B5529F;  /* Rosa secundario */
+  --color-text: #FFFFFF;        /* Texto blanco */
+  --color-text-secondary: #9CA3AF; /* Gris para textos secundarios */
+  --color-background: rgba(255, 255, 255, 0.03); /* Fondo translucido para las cards */
+  --color-hover: linear-gradient(90deg, #4F46E5, #B5529F); /* Para hover */
+  --color-details: rgba(255, 255, 255, 0.08) /* Para detalles, bordes y sombras */
 }
-body{
-   margin: 0;
-    font-family: 'Google Sans Flex', sans-serif;
-    background-color: var(--fondo-oscuro);
-    /* Este degradado crea el efecto de iluminación técnica */
-    background-image: radial-gradient(circle at 10% 10%, #1e1b4b 0%, transparent 40%);
-    background-attachment: fixed;
-    color: var(--texto-principal);
+
+/* Aplicar Fuente */
+* {
+  font-family: 'Google Sans Flex';
+}
+
+body {
+    margin: 0;
     min-height: 100vh;
 }
 
@@ -79,89 +80,20 @@ header {
 .caja_Titulo {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-top: -3.5px;
-}
-
-nav {
-    background-color: var(--violeta-primario);
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: space-between;
-    gap: 20px;
-}
-
-nav a {
-    background-color: var(--color-botones);
-    color: var(--texto-principal);
-    padding: 10px 15px;
-    text-decoration: none;
-    font-size: 1.2em;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-nav a:hover {
-    background-color: var(--violeta-brillante);
-    color: var(--texto-principal);
-}
-
-
-/* Footer */
-  footer {
-    padding: 60px 40px;
-    color: white;
-  }
   
-  /* Contenedor de columnas */
-  footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
-  }
+    background:
+      linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)),
+      url("../assets/img/fondo-test.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   
-  /* Texto final ocupa todo */
-  footer > p {
-    grid-column: 1 / -1;
-    text-align: center;
-    margin-top: 40px;
-    color: #9CA3AF;
-    font-size: 0.9rem;
-  }
-
-  /* 1er Columna */
-  #descripcion-footer {
-    color: #9CA3AF;
-    font-weight: bold;
-    font-size: 15px;
-  }
-
-  /* 2da Columna */
-  #txt-enlacesRapidos {
-    color: white;
-    font-weight: bold;
-    font-size: 23px;
-    display: flex;
-    gap: 8px;
-    align-items: center;
-  }
-
-  #txt-enlacesRapidos i {
-    color: #B5529F;
-    font-size: 20px;
-  }
-
-  footer a {
-    text-decoration: none; 
-    color: #9CA3AF;            
-    font-weight: 500;
-    position: relative;
-    transition: color 0.3s ease;
-  }
-  
-  footer a:hover {
-    color: white;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--color-text);
+    opacity: 0;
+    transform: translateY(10px);
+    overflow: hidden;
+    animation: fadeUp 3s ease forwards, enableScroll 5s linear forwards;
   }
 
   footer ul {

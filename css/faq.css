@@ -10,7 +10,7 @@ nav {
   backdrop-filter: blur(10px);
 
   /* Linea Divisora (Opcional) */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
+  border-bottom: 1px solid var(--color-details); 
 
   position: sticky;
   top: 0;
@@ -19,7 +19,7 @@ nav {
 
 /* Nav Hover */
 nav a:hover {
-    color: white;
+    color: var(--color-text);
   }
   
   /* Línea animada */
@@ -32,7 +32,7 @@ nav a:hover {
     width: 0%;
     height: 3px;
   
-    background: linear-gradient(90deg, #4F46E5, #B5529F);
+    background: var(--color-hover);
     border-radius: 3px;
   
     transition: width 0.3s ease;
@@ -66,17 +66,30 @@ nav ul {
 nav a {
   position: relative;
   text-decoration: none;
-  color: #b6bcc6;
+  color: var(--color-text-secondary);
   font-weight: bold;
   transition: color 0.3s ease;
 }
+
+/* Page Activa */
+nav a.active {
+    color: var(--color-text); /* destacar el texto */
+    font-weight: bold;
+  }
+  
+  /* Mantener línea animada siempre visible en activo */
+  nav a.active::after {
+    width: 100%;
+    background: var(--color-hover);
+  }
+
 /* Fin Nav Center */
 
 
 /* Titulo Animado */
 .typing-text {
     font-size: 33px;
-    color: white;
+    color: var(--color-text);
     font-weight: bold;
     text-align: center;
     margin-bottom: 80px;
@@ -85,10 +98,11 @@ nav a {
   
   .words {
     display: inline-block;
+    align-items: center;
     overflow: hidden;
-    height: 1.3em;
+    height: 1.170em;
     vertical-align: bottom;
-    color: #B5529F;
+    color: var(--color-secondary);
   }
   
   .words span {
@@ -115,20 +129,20 @@ nav a {
 }
 
 .faq-item {
-  background: linear-gradient(135deg, rgba(79,70,229,.08), rgba(181,82,159,.08));
-  border: 1px solid rgba(255,255,255,.08);
+  background: var(--color-background);
+  border: 1px solid var(--color-details);
   border-radius: 16px;
   margin: 0 auto;
   max-width: 850px;
   backdrop-filter: blur(10px);
   transition: transform .3s, box-shadow .3s, border-color .3s;
   margin-bottom: 30px;
-  color: white;
+  color: var(--color-text);
 }
 
 .faq-item:hover {
   transform: translateY(-3px);
-  border-color: #B5529F;
+  border-color: var(--color-secondary);
 }
 
 .faq-item[open] {
@@ -154,7 +168,7 @@ nav a {
   color: grey;
 }
 .faq-item:hover .faq-number,
-.faq-item[open] .faq-number { color: #B5529F; }
+.faq-item[open] .faq-number { color: var(--color-secondary); }
 
 /* Pregunta */
 .faq-trigger h3 { font-size: 1.15rem; font-weight: 600; color: var(--text-primary); }
@@ -162,8 +176,8 @@ nav a {
 /* Ícono */
 .faq-icon { display: flex; justify-content: center; align-items: center; color: grey; }
 .chevron-down { transition: transform .4s, color .4s; }
-.faq-item:hover .faq-icon { color: white; }
-.faq-item[open] .chevron-down { transform: rotate(180deg); color: #B5529F; }
+.faq-item:hover .faq-icon { color: var(--color-text); }
+.faq-item[open] .chevron-down { transform: rotate(180deg); color: var(--color-secondary); }
 
 /* Panel */
 .faq-panel {
@@ -176,9 +190,10 @@ nav a {
 
 .faq-panel-inner {
   min-height: 0;
-  padding: 0 24px 20px 70px;
-  color: var(--text-secondary);
+  padding: 0 20px 20px 50px;
+  color: var(--color-text-secondary);
   font-size: 0.95rem;
+  font-weight: bold;
   letter-spacing: .01em;
   opacity: 0;
   transform: translateY(-10px);
@@ -192,7 +207,7 @@ nav a {
     display: flex;
     align-items: center;
     text-align: center;
-    color: #9CA3AF;
+    color: var(--color-text-secondary);
     font-size: 0.9rem;
     padding: 80px;
   }
@@ -222,8 +237,8 @@ nav a {
     width: 100%;
     max-width: 800px;
   
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: var(--color-background);
+    border: 1px solid var(--color-details);
     border-radius: 16px;
   
     backdrop-filter: blur(10px);
@@ -237,12 +252,12 @@ nav a {
   .contact-box h3 {
     margin-bottom: 20px;
     font-size: 1.4rem;
-    color: white;
+    color: var(--color-text);
   }
   
   /* subtítulo */
   .contact-box p {
-    color: #9CA3AF;
+    color: var(--color-text-secondary);
     font-size: 0.95rem;
     margin-bottom: 30px;
   }
@@ -265,10 +280,10 @@ nav a {
     padding: 16px;
     border-radius: 10px;
   
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--color-details);
     background: rgba(255, 255, 255, 0.02);
   
-    color: white;
+    color: var(--color-text);
     font-size: 0.95rem;
   
     outline: none;
@@ -277,7 +292,7 @@ nav a {
   
   /* focus */
   .contact-form textarea:focus {
-    border-color: #B5529F;
+    border-color: var(--color-secondary);
     background: rgba(255, 255, 255, 0.04);
   }
   
@@ -293,11 +308,11 @@ nav a {
     padding: 14px 18px;
     border-radius: 10px;
 
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--color-details);
     cursor: pointer;
 
     font-weight: 500;
-    color: white;
+    color: var(--color-text);
 
     background: rgba(255, 255, 255, 0.04);
 
@@ -308,10 +323,10 @@ nav a {
   
   /* hover */
   .btn-submit:hover {
-    background: linear-gradient(90deg, #4F46E5, #B5529F);
+    background: var(--color-hover);
     border-color: transparent;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(181, 82, 159, 0.25);
+    box-shadow: 0 6px 20px var(--color-secondary);
   }
   
   /* icono */
@@ -329,7 +344,7 @@ nav a {
   /* Footer */
   footer {
     padding: 60px 40px;
-    color: white;
+    color: var(--color-text);
   }
   
   /* Contenedor de columnas */
@@ -344,20 +359,20 @@ nav a {
     grid-column: 1 / -1;
     text-align: center;
     margin-top: 40px;
-    color: #9CA3AF;
+    color: var(--color-text-secondary);
     font-size: 0.9rem;
   }
 
   /* 1er Columna */
   #descripcion-footer {
-    color: #9CA3AF;
+    color: var(--color-text-secondary);
     font-weight: bold;
     font-size: 15px;
   }
 
   /* 2da Columna */
   #txt-enlacesRapidos {
-    color: white;
+    color: var(--color-text);
     font-weight: bold;
     font-size: 23px;
     display: flex;
@@ -366,20 +381,20 @@ nav a {
   }
 
   #txt-enlacesRapidos i {
-    color: #B5529F;
+    color: var(--color-secondary);
     font-size: 20px;
   }
 
   footer a {
     text-decoration: none; 
-    color: #9CA3AF;            
+    color: var(--color-text-secondary);            
     font-weight: 500;
     position: relative;
     transition: color 0.3s ease;
   }
   
   footer a:hover {
-    color: white;
+    color: var(--color-text);
   }
 
   footer ul {
@@ -396,16 +411,20 @@ nav a {
     content: "→";
     position: absolute;
     left: 0;
-    color: #B5529F;
+    color: var(--color-secondary);
   }
 
+  footer li::before {
+    transition: transform 0.3s ease-in-out;
+  }
+  
   footer li:hover::before {
-    transform: scale(130%) rotate(-45deg);
+    transform: scale(1.3) rotate(-45deg);
   }
 
   /* 3er Columna */
   #txt-contacto {
-    color: white;
+    color: var(--color-text);
     font-weight: bold;
     font-size: 23px;
     display: flex;
@@ -414,14 +433,14 @@ nav a {
   }
 
   #txt-contacto i {
-    color: #B5529F;
+    color: var(--color-secondary);
     font-size: 20px;
   }
 
   #txt-email {
     font-size: 15px;
     text-decoration: none; 
-    color: #9CA3AF;            
+    color: var(--color-text-secondary);            
     font-weight: 500;
     position: relative;
     display: flex;
@@ -429,13 +448,13 @@ nav a {
   }
 
   #txt-email i {
-    color: #B5529F;
+    color: var(--color-secondary);
   }
 
   #txt-telefono {
     font-size: 15px;
     text-decoration: none; 
-    color: #9CA3AF;            
+    color: var(--color-text-secondary);            
     font-weight: 500;
     position: relative;
     display: flex;
@@ -443,13 +462,13 @@ nav a {
   }
 
   #txt-telefono i {
-    color: #B5529F;
+    color: var(--color-secondary);
   }
 
   #txt-direccion {
     font-size: 15px;
     text-decoration: none; 
-    color: #9CA3AF;            
+    color: var(--color-text-secondary);            
     font-weight: 500;
     position: relative;
     display: flex;
@@ -457,7 +476,7 @@ nav a {
   }
 
   #txt-direccion i {
-    color: #B5529F;
+    color: var(--color-secondary);
   }
 
   .redes-sociales {
@@ -474,8 +493,5 @@ nav a {
   }
 
   .redes-sociales:hover {
-    color: #B5529F;
+    color: var(--color-secondary);
   }
-
-
- 
