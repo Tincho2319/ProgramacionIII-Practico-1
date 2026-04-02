@@ -1,66 +1,260 @@
-/* Importar Fuente */
-@import url("https://fonts.google.com/share?selection.family=Google+Sans+Flex:opsz,wght@6..144,1..1000");
+/* Fuente Google Sans Flex*/
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
 
-/* Root Colores */
 :root {
-  --color-primary: #4F46E5;    /* Morado principal */
-  --color-secondary: #B5529F;  /* Rosa secundario */
-  --color-text: #FFFFFF;        /* Texto blanco */
-  --color-text-secondary: #9CA3AF; /* Gris para textos secundarios */
-  --color-background: rgba(255, 255, 255, 0.03); /* Fondo translucido para las cards */
-  --color-hover: linear-gradient(90deg, #4F46E5, #B5529F); /* Para hover */
-  --color-details: rgba(255, 255, 255, 0.08) /* Para detalles, bordes y sombras */
+    /* Colores a usar en el body general*/
+    --fondo-oscuro: #05070a;       
+    --azul-profundo: #0d121d;     
+    --violeta-primario: #6366f1;   
+    --violeta-brillante: #8b5cf6;  
+    --texto-principal: #ffffff;
+    --texto-secundario: #94a3b8;   
 }
-
-/* Aplicar Fuente */
-* {
-  font-family: 'Google Sans Flex';
-}
-
-body {
-    margin: 0;
+body{
+   margin: 0;
+    font-family: 'Google Sans Flex', sans-serif;
+    background-color: var(--fondo-oscuro);
+    /* Este degradado crea el efecto de iluminación técnica */
+    background-image: radial-gradient(circle at 10% 10%, #1e1b4b 0%, transparent 40%);
+    background-attachment: fixed;
+    color: var(--texto-principal);
     min-height: 100vh;
+}
+
+header {
+    background-color: var(--azul-profundo);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_titulo {
+    display: flex;
+    flex-direction: row;
+    align-items: space-around;
+    font-size: 2.5em;
+    margin: 0px 0px 0px 3px;
+    color: var(--texto-principal);
+}
+
+.logo {
+    display: flex;
+    width: 200px;
+    height: auto;
+    margin:0px 0px 10px 0px; 
+}
+
+.Titulo {
     display: flex;
     flex-direction: column;
-  
-    background:
-      linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)),
-      url("../assets/img/fondo-test.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  
-    font-family: system-ui, -apple-system, sans-serif;
-    color: var(--color-text);
-    opacity: 0;
-    transform: translateY(10px);
-    overflow: hidden;
-    animation: fadeUp 3s ease forwards, enableScroll 5s linear forwards;
-  }
-  
-  main {
-    flex: 1;
-    opacity: 0;
-    transform: translateY(10px);
-    animation: fadeUp 3s ease forwards;
-  }
-
-  @keyframes fadeUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-@keyframes enableScroll {
-  to {
-    overflow: auto;
-  }
+    align-items: space-between;
+    font-size: 2.5em;
+    margin: 0px 0px 0px 3px;
+    color: var(--texto-principal);
 }
 
-@media (max-width: 768px) {
+.texto_Titulo {
+    display: flex;
+    align-items: space-between;
+   flex-direction: column;
+    font-family: 'Google Sans Flex', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin: -25px 0px 0px 81px;
+    color: var(--texto-principal);
+    display: flex;
+}
+
+.texto_SubTitulo_Derecho {
+    display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    margin-top: -20px;
+    margin-left: 850px;
+    font-weight: bold;
+    color: var(--texto-principal);
+    display: flex;
+}
+.caja_Titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: -3.5px;
+}
+
+nav {
+    background-color: var(--violeta-primario);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+    gap: 20px;
+}
+
+nav a {
+    background-color: var(--color-botones);
+    color: var(--texto-principal);
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--violeta-brillante);
+    color: var(--texto-principal);
+}
+
+
+/* Footer */
   footer {
-    grid-template-columns: 1fr;
-    text-align: center;
+    padding: 60px 40px;
+    color: white;
   }
-}
+  
+  /* Contenedor de columnas */
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+  }
+  
+  /* Texto final ocupa todo */
+  footer > p {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 40px;
+    color: #9CA3AF;
+    font-size: 0.9rem;
+  }
+
+  /* 1er Columna */
+  #descripcion-footer {
+    color: #9CA3AF;
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  /* 2da Columna */
+  #txt-enlacesRapidos {
+    color: white;
+    font-weight: bold;
+    font-size: 23px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  #txt-enlacesRapidos i {
+    color: #B5529F;
+    font-size: 20px;
+  }
+
+  footer a {
+    text-decoration: none; 
+    color: #9CA3AF;            
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  footer a:hover {
+    color: white;
+  }
+
+  footer ul {
+    list-style: none;
+  }
+
+  footer li {
+    position: relative;
+    padding-left: 33px;
+    margin: 13px;
+  }
+
+  footer li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #B5529F;
+  }
+
+  footer li:hover::before {
+    transform: scale(130%) rotate(-45deg);
+  }
+
+  /* 3er Columna */
+  #txt-contacto {
+    color: white;
+    font-weight: bold;
+    font-size: 23px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  #txt-contacto i {
+    color: #B5529F;
+    font-size: 20px;
+  }
+
+  #txt-email {
+    font-size: 15px;
+    text-decoration: none; 
+    color: #9CA3AF;            
+    font-weight: 500;
+    position: relative;
+    display: flex;
+    gap: 8px;
+  }
+
+  #txt-email i {
+    color: #B5529F;
+  }
+
+  #txt-telefono {
+    font-size: 15px;
+    text-decoration: none; 
+    color: #9CA3AF;            
+    font-weight: 500;
+    position: relative;
+    display: flex;
+    gap: 8px;
+  }
+
+  #txt-telefono i {
+    color: #B5529F;
+  }
+
+  #txt-direccion {
+    font-size: 15px;
+    text-decoration: none; 
+    color: #9CA3AF;            
+    font-weight: 500;
+    position: relative;
+    display: flex;
+    gap: 8px;
+  }
+
+  #txt-direccion i {
+    color: #B5529F;
+  }
+
+  .redes-sociales {
+    padding-right: 33px;
+    padding-top: 23px;
+    margin-right: 33px;
+    margin-top: 23px;
+    display: flex;
+    font-size: 23px;
+  }
+
+  .redes-sociales i {
+    padding: 8px;
+  }
+
+  .redes-sociales:hover {
+    color: #B5529F;
+  }
