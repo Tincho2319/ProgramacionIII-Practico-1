@@ -1,0 +1,88 @@
+/* Nav General */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 30px 30px;
+
+  background: transparent;
+  backdrop-filter: blur(10px);
+
+  /* Linea Divisora (Opcional) */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.CEO {
+    font-family: "Google Sans Flex", sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    margin: 5% 20%;
+    border-radius: 30px;
+    transition: all 0.8s ease;
+    overflow: hidden;
+}
+.CEO:hover{
+    box-shadow: 0px 0px 10px 10px rgb(64, 31, 84);
+}
+.CEO img{
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+.Mobile{
+    font-family: "Google Sans Flex", sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 5% 20%;
+    border-radius: 30px;
+    transition: all 0.8s ease;
+    overflow: hidden;
+}
+.Mobile:hover{
+    box-shadow: 0px 0px 10px 10px rgb(64, 31, 84);
+}
+.Mobile img{
+    width: 100px;
+    height: auto;
+}
+.Web{
+    font-family: "Google Sans Flex", sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    margin: 5% 20%;
+    border-radius: 30px;
+    transition: all 0.8s ease;
+    overflow: hidden;
+}
+.Web:hover{
+    box-shadow: 0px 0px 10px 10px rgb(64, 31, 84);
+}
+.Web img{
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+.Cloud{
+    font-family: "Google Sans Flex", sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 5% 20%;
+    border-radius: 30px;
+    transition: all 0.8s ease;
+    overflow: hidden;
+}
+.Cloud:hover{
+    box-shadow: 0px 0px 10px 10px rgb(64, 31, 84);
+}
+.Cloud img{
+    width: 100px;
+    height: auto;
+}
