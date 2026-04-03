@@ -128,11 +128,17 @@ nav a:hover {
   /* Fin Nav General */
 
 
+/* Navbar settings */
+.navbar {
+  width: 100%;
+}
+
 /* Nav Left */
 .nav-left {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex: 1;
 }
 /* Fin Nav Left */
 
@@ -143,6 +149,15 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  justify-content: center;
+}
+
+/* Nav Right */
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
 }
 
 
