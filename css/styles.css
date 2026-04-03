@@ -11,7 +11,7 @@
     --texto-secundario: #94a3b8;   
 }
 body{
-   margin: 0;
+    margin: 0;
     font-family: 'Google Sans Flex', sans-serif;
     background-color: var(--fondo-oscuro);
     /* Este degradado crea el efecto de iluminación técnica */
@@ -57,7 +57,7 @@ header {
 .texto_Titulo {
     display: flex;
     align-items: space-between;
-   flex-direction: column;
+    flex-direction: column;
     font-family: 'Google Sans Flex', sans-serif;
     font-size: 15px;
     font-weight: bold;
