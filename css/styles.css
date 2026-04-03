@@ -166,6 +166,7 @@ nav a {
   position: relative;
   text-decoration: none;
   color: #b6bcc6;
+  font-size: 20px;
   font-weight: bold;
   transition: color 0.3s ease;
 }
@@ -173,152 +174,170 @@ nav a {
 
 
 /* Footer */
+footer {
+  width: 100%;
+  padding: 50px 20px 20px; /* Un poco de aire arriba para no ahorcar al contenido */
+  background-color: var(--azul-profundo);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: white;
+  display: grid;
+  grid-template-columns: minmax(auto, 350px) minmax(auto, 200px) minmax(auto, 300px);
+  justify-content: center;
+  align-items: start;
+  column-gap: 50px;
+  row-gap: 0; /* Removemos gap para controlarlo con margin */
+  box-sizing: border-box;
+}
+
+footer .logo {
+  height: 40px; /* Un poco más pequeño para mayor elegancia */
+  width: auto;
+  margin-top: 2px; /* Pequeño ajuste para alinear con el texto */
+  margin-bottom: 15px;
+}
+
+/* Texto final ocupa todo */
+footer > p {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+/* 1er Columna */
+#descripcion-footer {
+  color: #9CA3AF;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-top: 0; 
+}
+
+/* Títulos de 2da y 3ra Columna */
+#txt-enlacesRapidos, #txt-contacto {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  margin-top: 5px; /* Alineación visual con la parte superior del logo */
+}
+
+/* Enlaces Rápidos */
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px; /* Corto */
+}
+
+footer li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #B5529F;
+  transition: transform 0.3s ease;
+}
+
+footer li:hover::before {
+  transform: translateX(5px);
+}
+
+footer a {
+  text-decoration: none; 
+  color: #9CA3AF;            
+  font-weight: 500;
+  font-size: 16px; /* Aumentado */
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: white;
+}
+
+/* Contacto Textos */
+#txt-email, #txt-telefono, #txt-direccion {
+  font-size: 16px; /* Aumentado */
+  color: #9CA3AF;            
+  font-weight: 500;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px; /* Corto */
+  align-items: center;
+}
+
+#txt-email i, #txt-telefono i, #txt-direccion i {
+  color: #B5529F;
+  font-size: 16px; /* Restaurado */
+  width: 20px;
+  text-align: center;
+}
+
+/* Redes Sociales */
+.redes-sociales {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.redes-sociales a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px; /* Restaurado */
+  height: 42px; /* Restaurado */
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  color: #9CA3AF;
+  transition: all 0.3s ease;
+}
+
+.redes-sociales a:hover {
+  background: linear-gradient(135deg, #4F46E5, #B5529F);
+  color: white;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(181, 82, 159, 0.2);
+}
+
+.redes-sociales i {
+  font-size: 18px; /* Restaurado */
+}
+
+/* Responsividad para Footer */
+@media (max-width: 900px) {
   footer {
-    padding: 60px 40px;
-    color: white;
-  }
-  
-  /* Contenedor de columnas */
-  footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
-  }
-  
-  /* Texto final ocupa todo */
-  footer > p {
-    grid-column: 1 / -1;
+    grid-template-columns: 1fr;
     text-align: center;
-    margin-top: 40px;
-    color: #9CA3AF;
-    font-size: 0.9rem;
-  }
-
-  /* 1er Columna */
-  #descripcion-footer {
-    color: #9CA3AF;
-    font-weight: bold;
-    font-size: 15px;
-  }
-
-  /* 2da Columna */
-  #txt-enlacesRapidos {
-    color: white;
-    font-weight: bold;
-    font-size: 23px;
-    display: flex;
-    gap: 8px;
-    align-items: center;
-  }
-
-  #txt-enlacesRapidos i {
-    color: #B5529F;
-    font-size: 20px;
-  }
-
-  footer a {
-    text-decoration: none; 
-    color: #9CA3AF;            
-    font-weight: 500;
-    position: relative;
-    transition: color 0.3s ease;
+    gap: 30px;
+    padding: 30px 20px 20px;
   }
   
-  footer a:hover {
-    color: white;
+  #txt-enlacesRapidos, #txt-contacto {
+    justify-content: center;
   }
-
-  footer ul {
-    list-style: none;
+  
+  footer li, #txt-email, #txt-telefono, #txt-direccion {
+    justify-content: center;
   }
-
-  footer li {
-    position: relative;
-    padding-left: 33px;
-    margin: 13px;
-  }
-
+  
   footer li::before {
-    content: "→";
-    position: absolute;
-    left: 0;
-    color: #B5529F;
+    display: none; /* Quitamos la flecha en móvil al centrar */
   }
-
-  footer li:hover::before {
-    transform: scale(130%) rotate(-45deg);
+  
+  footer li {
+    padding-left: 0;
   }
-
-  /* 3er Columna */
-  #txt-contacto {
-    color: white;
-    font-weight: bold;
-    font-size: 23px;
-    display: flex;
-    gap: 8px;
-    align-items: center;
-  }
-
-  #txt-contacto i {
-    color: #B5529F;
-    font-size: 20px;
-  }
-
-  #txt-email {
-    font-size: 15px;
-    text-decoration: none; 
-    color: #9CA3AF;            
-    font-weight: 500;
-    position: relative;
-    display: flex;
-    gap: 8px;
-  }
-
-  #txt-email i {
-    color: #B5529F;
-  }
-
-  #txt-telefono {
-    font-size: 15px;
-    text-decoration: none; 
-    color: #9CA3AF;            
-    font-weight: 500;
-    position: relative;
-    display: flex;
-    gap: 8px;
-  }
-
-  #txt-telefono i {
-    color: #B5529F;
-  }
-
-  #txt-direccion {
-    font-size: 15px;
-    text-decoration: none; 
-    color: #9CA3AF;            
-    font-weight: 500;
-    position: relative;
-    display: flex;
-    gap: 8px;
-  }
-
-  #txt-direccion i {
-    color: #B5529F;
-  }
-
+  
   .redes-sociales {
-    padding-right: 33px;
-    padding-top: 23px;
-    margin-right: 33px;
-    margin-top: 23px;
-    display: flex;
-    font-size: 23px;
+    justify-content: center;
   }
-
-  .redes-sociales i {
-    padding: 8px;
-  }
-
-  .redes-sociales:hover {
-    color: #B5529F;
-  }
+}
