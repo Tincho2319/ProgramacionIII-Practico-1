@@ -1,1 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Impulsar</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/contacto.css">
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<header>
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="../assets/img/logocompleto-test.png" alt="Logo" class="logo" height="40">
+        </div>
+
+        <ul class="nav-center">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="equipo.html">Equipo</a></li>
+            <li><a href="pedido.html">Pedido</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+
+        <div class="nav-right"></div>
+    </nav>
+</header>
+
+<main>
+
+    <h1 class="typing-text">Contacto</h1>
+
+    <section class="faq-contact">
+        <div class="contact-box">
+
+            <h3>Escribinos</h3>
+            <p>Dejanos tu mensaje y te responderemos lo antes posible.</p>
+
+            <!-- MENSAJE OCULTO -->
+            <p id="mensaje-exito" style="display:none; color:#B5529F; font-weight:bold;">
+                ✅ Ya recibimos tu mensaje, te responderemos en breve.
+            </p>
+
+            <form class="contact-form" id="form-contacto">
+
+                <input type="text" placeholder="Nombre" required>
+                <input type="text" placeholder="Apellido" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Escribí tu mensaje..." rows="5" required></textarea>
+
+                <button type="submit" class="btn-submit">
+                    Enviar mensaje
+                </button>
+
+                <button type="reset" class="btn-submit">
+                    Limpiar
+                </button>
+
+            </form>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div>
+        <h3><i class="fa-solid fa-code"></i> Impulsar</h3>
+        <p>Empresa líder en desarrollo de software a medida.</p>
+    </div>
+
+    <div>
+        <h3>Enlaces Rápidos</h3>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="equipo.html">Equipo</a></li>
+            <li><a href="pedido.html">Pedido</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>Contacto</h3>
+        <p>info@impulsar.com</p>
+        <p>+54 11 1234-5678</p>
+    </div>
+
+    <p>© 2026 Impulsar</p>
+</footer>
+
+<!-- SCRIPT -->
+<script>
+document.getElementById("form-contacto").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    document.getElementById("mensaje-exito").style.display = "block";
+
+    this.reset();
+});
+</script>
+
+</body>
+</html>

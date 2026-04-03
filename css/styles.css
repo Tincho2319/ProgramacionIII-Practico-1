@@ -1,3 +1,6 @@
+/* Fuente Google Sans Flex*/
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+
 :root {
     /* Colores a usar en el body general*/
     --fondo-oscuro: #05070a;       
@@ -9,7 +12,7 @@
 }
 body{
    margin: 0;
-    font-family: 'Inter', sans-serif; /* Fuente principal para el header y body*/
+    font-family: 'Google Sans Flex', sans-serif;
     background-color: var(--fondo-oscuro);
     /* Este degradado crea el efecto de iluminación técnica */
     background-image: radial-gradient(circle at 10% 10%, #1e1b4b 0%, transparent 40%);
@@ -26,23 +29,28 @@ header {
     align-items: center;
 }
 
+.header_titulo {
+    display: flex;
+    flex-direction: row;
+    align-items: space-around;
+    font-size: 2.5em;
+    margin: 0px 0px 0px 3px;
+    color: var(--texto-principal);
+}
+
 .logo {
     display: flex;
-    width: 5px;
-    height: 1px;
-    margin-right: 15px;
-    font-size: 1.5em;
-    font-weight: bold;
-    color: var(--texto-principal);
-    text-decoration: none;
+    width: 200px;
+    height: auto;
+    margin:0px 0px 10px 0px; 
 }
 
 .Titulo {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: space-between;
     font-size: 2.5em;
-    margin: 0px 0px 0px 5px;
+    margin: 0px 0px 0px 3px;
     color: var(--texto-principal);
 }
 
@@ -50,10 +58,21 @@ header {
     display: flex;
     align-items: space-between;
    flex-direction: column;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Google Sans Flex', sans-serif;
     font-size: 15px;
     font-weight: bold;
-    margin: 0;
+    margin: -25px 0px 0px 81px;
+    color: var(--texto-principal);
+    display: flex;
+}
+
+.texto_SubTitulo_Derecho {
+    display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    margin-top: -20px;
+    margin-left: 850px;
+    font-weight: bold;
     color: var(--texto-principal);
     display: flex;
 }
