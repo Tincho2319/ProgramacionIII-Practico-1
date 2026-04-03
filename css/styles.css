@@ -97,27 +97,38 @@ nav {
   z-index: 1000;
 }
 
+/* Nav Links & Effects */
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: #b6bcc6;
+  font-size: 20px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
 nav a:hover {
   color: white;
 }
 
+/* Línea animada */
 nav a::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: -5px;
   width: 0%;
-  height: 2px;
+  height: 3px;
   background: linear-gradient(90deg, #4F46E5, #B5529F);
+  border-radius: 3px;
   transition: width 0.3s ease;
 }
 
 nav a:hover::after {
   width: 100%;
 }
-  /* Fin Nav General */
 
-
+/* Layout Components */
 .navbar {
   width: 100%;
   display: flex;
@@ -133,12 +144,11 @@ nav a:hover::after {
 
 nav ul {
   display: flex;
-  gap: 35px;
+  gap: 40px;
   list-style: none;
   margin: 0;
   padding: 0;
   justify-content: center;
-  flex: 2;
 }
 
 .nav-right {
@@ -147,17 +157,6 @@ nav ul {
   align-items: center;
   flex: 1;
 }
-
-nav a {
-  position: relative;
-  text-decoration: none;
-  color: #b6bcc6;
-  font-size: 20px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-/* Fin Nav Center */
-
 
 /* Footer Premium */
 footer {
@@ -182,6 +181,7 @@ footer .logo {
   margin-bottom: 15px;
 }
 
+/* Texto final ocupa todo */
 footer > p {
   grid-column: 1 / -1;
   text-align: center;
@@ -192,6 +192,7 @@ footer > p {
   font-size: 0.9rem;
 }
 
+/* 1er Columna */
 #descripcion-footer {
   color: #9CA3AF;
   font-weight: 400;
@@ -200,6 +201,7 @@ footer > p {
   margin-top: 0; 
 }
 
+/* Títulos de 2da y 3ra Columna */
 #txt-enlacesRapidos, #txt-contacto {
   color: white;
   font-weight: bold;
@@ -210,6 +212,7 @@ footer > p {
   margin-top: 5px;
 }
 
+/* Enlaces Rápidos */
 footer ul {
   list-style: none;
   padding: 0;
@@ -246,6 +249,7 @@ footer a:hover {
   color: white;
 }
 
+/* Contacto Textos */
 #txt-email, #txt-telefono, #txt-direccion {
   font-size: 16px;
   color: #9CA3AF;            
@@ -263,6 +267,7 @@ footer a:hover {
   text-align: center;
 }
 
+/* Redes Sociales */
 .redes-sociales {
   display: flex;
   gap: 15px;
@@ -273,12 +278,16 @@ footer a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.05);
   color: #9CA3AF;
   transition: all 0.3s ease;
+}
+
+.redes-sociales i {
+  font-size: 18px;
 }
 
 .redes-sociales a:hover {
@@ -288,18 +297,24 @@ footer a:hover {
   box-shadow: 0 10px 20px rgba(181, 82, 159, 0.2);
 }
 
+/* Responsividad */
 @media (max-width: 900px) {
   nav { padding: 15px 20px; }
   nav ul { display: none; }
+  
   footer {
     grid-template-columns: 1fr;
     text-align: center;
-    gap: 40px;
-    padding: 40px 20px;
+    gap: 30px;
+    padding: 30px 20px 20px;
   }
+  
   #txt-enlacesRapidos, #txt-contacto, .redes-sociales, footer li, #txt-email, #txt-telefono, #txt-direccion {
     justify-content: center;
     padding-left: 0;
   }
-  footer li::before { display: none; }
+  
+  footer li::before {
+    display: none;
+  }
 }
