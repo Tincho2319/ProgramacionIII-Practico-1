@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/faq.css">
+    <link rel="stylesheet" href="../css/contacto.css"> <!-- CAMBIADO -->
 </head>
 
 <body>
@@ -25,7 +25,7 @@
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="servicios.html">Servicios</a></li>
             <li><a href="equipo.html">Equipo</a></li>
-            <li><a href="pedido.html">Pedido</a></li> <!-- agregado -->
+            <li><a href="pedido.html">Pedido</a></li>
             <li><a href="faq.html">FAQ</a></li>
             <li><a href="contacto.html">Contacto</a></li>
         </ul>
@@ -83,8 +83,8 @@
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="servicios.html">Servicios</a></li>
             <li><a href="equipo.html">Equipo</a></li>
-            <li><a href="pedido.html">Pedido</a></li> <!-- corregido -->
-            <li><a href="faq.html">FAQ</a></li> <!-- corregido -->
+            <li><a href="pedido.html">Pedido</a></li>
+            <li><a href="faq.html">FAQ</a></li>
         </ul>
     </div>
 
@@ -100,11 +100,11 @@
 <!-- SCRIPT -->
 <script>
 document.getElementById("form-contacto").addEventListener("submit", function(e) {
-    e.preventDefault(); // evita recargar la página
+    e.preventDefault();
 
     document.getElementById("mensaje-exito").style.display = "block";
 
-    this.reset(); // limpia el formulario
+    this.reset();
 });
 </script>
 
