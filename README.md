@@ -63,10 +63,10 @@ ProgramacionIII-Practico-1/
 
 - [@fedeheinrich](https://github.com/fedeheinrich) - Federico Heinrich
 - [@Tincho2319](https://github.com/Tincho2319) - Martin Alcaraz
-- [@Nahuelete] (https://github.com/Nahuelete) - Nahuel Cappa
-- [@Oviedo-Matias] (https://github.com/Oviedo-Matias) - Matias Oviedo
-- [@nicc-essp] (https://github.com/nicc-essp) - Nicolas Espulef
-- [@HomeroColomboArg] (https://github.com/HomeroColomboArg) - Homero Colombo
+- [@Nahuelete](https://github.com/Nahuelete) - Nahuel Cappa
+- [@Oviedo-Matias](https://github.com/Oviedo-Matias) - Matias Oviedo
+- [@nicc-essp](https://github.com/nicc-essp) - Nicolas Espulef
+- [@HomeroColomboArg](https://github.com/HomeroColomboArg) - Homero Colombo
 
 ---
 
