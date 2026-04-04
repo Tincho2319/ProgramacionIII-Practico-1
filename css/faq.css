@@ -14,7 +14,7 @@
     overflow: hidden;
     height: 1.170em;
     vertical-align: bottom;
-    color: var(--color-secondary);
+    color: var(--violeta-brillante);
   }
   
   .words span {
@@ -41,8 +41,8 @@
 }
 
 .faq-item {
-  background: var(--color-background);
-  border: 1px solid var(--color-details);
+  background: var(--fondo-secundario);
+  border: 1px solid #fefefe11;
   border-radius: 16px;
   margin: 0 auto;
   max-width: 850px;
@@ -54,11 +54,11 @@
 
 .faq-item:hover {
   transform: translateY(-3px);
-  border-color: var(--color-secondary);
+  border-color: var(--violeta-brillante);
 }
 
 .faq-item[open] {
-  border-color: rgba(181,82,159,.6);
+  border-color: var(--violeta-brillante);
   box-shadow: 0 0 0 1px rgba(181,82,159,.3), 0 10px 30px rgba(0,0,0,.3), 0 0 25px rgba(181,82,159,.15);
 }
 
@@ -79,17 +79,18 @@
   font: bold .9rem monospace;
   color: grey;
 }
+
 .faq-item:hover .faq-number,
-.faq-item[open] .faq-number { color: var(--color-secondary); }
+.faq-item[open] .faq-number { color: var(--violeta-brillante); }
 
 /* Pregunta */
-.faq-trigger h3 { font-size: 1.15rem; font-weight: 600; color: var(--text-primary); }
+.faq-trigger h3 { font-size: 1.15rem; font-weight: 600; color: var(--texto-principal); }
 
 /* Ícono */
 .faq-icon { display: flex; justify-content: center; align-items: center; color: grey; }
 .chevron-down { transition: transform .4s, color .4s; }
-.faq-item:hover .faq-icon { color: var(--color-text); }
-.faq-item[open] .chevron-down { transform: rotate(180deg); color: var(--color-secondary); }
+.faq-item:hover .faq-icon { color: var(--texto-principal); }
+.faq-item[open] .chevron-down { transform: rotate(180deg); color: var(--texto-principal); }
 
 /* Panel */
 .faq-panel {
@@ -103,7 +104,7 @@
 .faq-panel-inner {
   min-height: 0;
   padding: 0 20px 20px 50px;
-  color: var(--color-text-secondary);
+  color: var(--texto-secundario);
   font-size: 0.95rem;
   font-weight: bold;
   letter-spacing: .01em;
@@ -119,7 +120,7 @@
     display: flex;
     align-items: center;
     text-align: center;
-    color: var(--color-text-secondary);
+    color: var(--texto-secundario);
     font-size: 0.9rem;
     padding: 80px;
   }
@@ -149,8 +150,8 @@
     width: 100%;
     max-width: 800px;
   
-    background: var(--color-background);
-    border: 1px solid var(--color-details);
+    background: var(--fondo-secundario);
+    border: 1px solid #fefefe11;
     border-radius: 16px;
   
     backdrop-filter: blur(10px);
@@ -164,12 +165,12 @@
   .contact-box h3 {
     margin-bottom: 20px;
     font-size: 1.4rem;
-    color: var(--color-text);
+    color: var(--texto-principal);
   }
   
   /* subtítulo */
   .contact-box p {
-    color: var(--color-text-secondary);
+    color: var(--texto-secundario);
     font-size: 0.95rem;
     margin-bottom: 30px;
   }
@@ -192,10 +193,10 @@
     padding: 16px;
     border-radius: 10px;
   
-    border: 1px solid var(--color-details);
+    border: 1px solid #fefefe11;
     background: rgba(255, 255, 255, 0.02);
   
-    color: var(--color-text);
+    color: var(--texto-principal);
     font-size: 0.95rem;
   
     outline: none;
@@ -204,7 +205,7 @@
   
   /* focus */
   .contact-form textarea:focus {
-    border-color: var(--color-secondary);
+    border-color: var(--texto-secondary);
     background: rgba(255, 255, 255, 0.04);
   }
   
@@ -220,11 +221,11 @@
     padding: 14px 18px;
     border-radius: 10px;
 
-    border: 1px solid var(--color-details);
+    border: 1px solid var(--texto-secondary);
     cursor: pointer;
 
     font-weight: 500;
-    color: var(--color-text);
+    color: var(--texto-principal);
 
     background: rgba(255, 255, 255, 0.04);
 
@@ -235,10 +236,10 @@
   
   /* hover */
   .btn-submit:hover {
-    background: var(--color-hover);
+    background: linear-gradient(135deg, var(--violeta-primario), var(--violeta-brillante));
     border-color: transparent;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px var(--color-secondary);
+    box-shadow: 0 6px 20px var(--texto-secondary);
   }
   
   /* icono */
@@ -248,162 +249,26 @@
   }
 
   .btn-submit:hover svg {
-    transform: translateX(4px);
+    transform: translateX(3px);
     opacity: 1;
   }
   /* Fin Enviar Pregunta */
 
-  /* Footer */
-  footer {
-    padding: 60px 40px;
-    color: var(--color-text);
+  /* Consulta Enviada */
+  .mensaje-ok {
+    display: none;
+
   }
   
-  /* Contenedor de columnas */
-  footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
+  /* Oculta el form */
+  #enviar-toggle:checked ~ #titulo-ayuda,
+  #enviar-toggle:checked ~ #subtitulo-ayuda,
+  #enviar-toggle:checked ~ .contact-form {
+    display: none;
   }
   
-  /* Texto final ocupa todo */
-  footer > p {
-    grid-column: 1 / -1;
-    text-align: center;
-    margin-top: 40px;
-    color: var(--color-text-secondary);
-    font-size: 0.9rem;
+  /* Muestra el mensaje */
+  #enviar-toggle:checked ~ .mensaje-ok {
+    display: block;
   }
-
-  /* 1er Columna */
-  #descripcion-footer {
-    color: var(--color-text-secondary);
-    font-weight: bold;
-    font-size: 15px;
-  }
-
-  /* 2da Columna */
-  #txt-enlacesRapidos {
-    color: var(--color-text);
-    font-weight: bold;
-    font-size: 23px;
-    display: flex;
-    gap: 8px;
-    align-items: center;
-  }
-
-  #txt-enlacesRapidos i {
-    color: var(--color-secondary);
-    font-size: 20px;
-  }
-
-  footer a {
-    text-decoration: none; 
-    color: var(--color-text-secondary);            
-    font-weight: 500;
-    position: relative;
-    transition: color 0.3s ease;
-  }
-  
-  footer a:hover {
-    color: var(--color-text);
-  }
-
-  footer ul {
-    list-style: none;
-  }
-
-  footer li {
-    position: relative;
-    padding-left: 33px;
-    margin: 13px;
-  }
-
-  footer li::before {
-    content: "→";
-    position: absolute;
-    left: 0;
-    color: var(--color-secondary);
-  }
-
-  footer li::before {
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  footer li:hover::before {
-    transform: scale(1.3) rotate(-45deg);
-  }
-
-  /* 3er Columna */
-  #txt-contacto {
-    color: var(--color-text);
-    font-weight: bold;
-    font-size: 23px;
-    display: flex;
-    gap: 8px;
-    align-items: center;
-  }
-
-  #txt-contacto i {
-    color: var(--color-secondary);
-    font-size: 20px;
-  }
-
-  #txt-email {
-    font-size: 15px;
-    text-decoration: none; 
-    color: var(--color-text-secondary);            
-    font-weight: 500;
-    position: relative;
-    display: flex;
-    gap: 8px;
-  }
-
-  #txt-email i {
-    color: var(--color-secondary);
-  }
-
-  #txt-telefono {
-    font-size: 15px;
-    text-decoration: none; 
-    color: var(--color-text-secondary);            
-    font-weight: 500;
-    position: relative;
-    display: flex;
-    gap: 8px;
-  }
-
-  #txt-telefono i {
-    color: var(--color-secondary);
-  }
-
-  #txt-direccion {
-    font-size: 15px;
-    text-decoration: none; 
-    color: var(--color-text-secondary);            
-    font-weight: 500;
-    position: relative;
-    display: flex;
-    gap: 8px;
-  }
-
-  #txt-direccion i {
-    color: var(--color-secondary);
-  }
-
-  .redes-sociales {
-    padding-right: 33px;
-    padding-top: 23px;
-    margin-right: 33px;
-    margin-top: 23px;
-    display: flex;
-    font-size: 23px;
-  }
-
-  .redes-sociales i {
-    padding: 8px;
-  }
-
-  .redes-sociales:hover {
-    color: var(--color-secondary);
-  }
+  /* Fin Consulta Enviada */
