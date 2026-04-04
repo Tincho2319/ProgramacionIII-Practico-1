@@ -20,7 +20,7 @@
     <!-- Background -->
     <div class="background"></div>
 
-    <!-- NavBar -->
+    <!-- Header -->
     <header>
         <nav class="navbar">
             <div class="nav-left">
@@ -57,7 +57,7 @@
         <details class="faq-item">
             <summary class="faq-trigger">
                 <span class="faq-number">01</span>
-                <h3>¿Pregunta 1?</h3>
+                <h3>¿Qué servicios ofrece su empresa?</h3>
                 <span class="faq-icon">
                     <svg class="chevron-down" width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 1L8 8L15 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -66,7 +66,7 @@
             </summary>
             <div class="faq-panel">
                 <div class="faq-panel-inner">
-                    <p>Respuesta 1</p>
+                    <p>Ofrecemos desarrollo de software a medida, diseño de aplicaciones móviles, mantenimiento de sistemas y consultoría tecnológica para empresas de cualquier tamaño.</p>
                 </div>
             </div>
         </details>
@@ -76,7 +76,7 @@
     <details class="faq-item">
         <summary class="faq-trigger">
             <span class="faq-number">02</span>
-            <h3>¿Pregunta 2?</h3>
+            <h3>¿Cómo puedo solicitar un presupuesto?</h3>
             <span class="faq-icon">
                 <svg class="chevron-down" width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 1L8 8L15 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -85,7 +85,7 @@
         </summary>
         <div class="faq-panel">
             <div class="faq-panel-inner">
-                <p>Respuesta 2</p>
+                <p>Puedes solicitar un presupuesto completando nuestro formulario de contacto o enviándonos un correo detallando tu proyecto. Te responderemos con una propuesta en menos de 48 horas hábiles.</p>
             </div>
         </div>
     </details>
@@ -94,7 +94,7 @@
     <details class="faq-item">
         <summary class="faq-trigger">
             <span class="faq-number">03</span>
-            <h3>¿Pregunta 3?</h3>
+            <h3>¿Trabajan con startups y pequeñas empresas?</h3>
             <span class="faq-icon">
                 <svg class="chevron-down" width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 1L8 8L15 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -103,7 +103,7 @@
         </summary>
         <div class="faq-panel">
             <div class="faq-panel-inner">
-                <p>Respuesta 23</p>
+                <p>Sí, nos especializamos en proyectos de todos los tamaños, desde startups hasta grandes corporaciones. Adaptamos nuestros servicios a tu presupuesto y necesidades específicas.</p>
             </div>
         </div>
     </details>
@@ -112,7 +112,7 @@
     <details class="faq-item">
         <summary class="faq-trigger">
             <span class="faq-number">04</span>
-            <h3>¿Pregunta 4?</h3>
+            <h3>¿Ofrecen soporte después de finalizar el proyecto?</h3>
             <span class="faq-icon">
                 <svg class="chevron-down" width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 1L8 8L15 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -121,7 +121,7 @@
         </summary>
         <div class="faq-panel">
             <div class="faq-panel-inner">
-                <p>Respuesta 4</p>
+                <p>Sí, brindamos soporte técnico y mantenimiento post-lanzamiento, con planes flexibles según las necesidades de cada cliente.</p>
             </div>
         </div>
     </details>
@@ -130,7 +130,7 @@
     <details class="faq-item">
         <summary class="faq-trigger">
             <span class="faq-number">05</span>
-            <h3>¿Pregunta 5?</h3>
+            <h3>¿Que tecnologías utilizan?</h3>
             <span class="faq-icon">
                 <svg class="chevron-down" width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 1L8 8L15 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -139,7 +139,7 @@
         </summary>
         <div class="faq-panel">
             <div class="faq-panel-inner">
-                <p>Respuesta 5</p>
+                <p>Trabajamos con tecnologías modernas como Flutter, React, Node.js, Html, CSS, Python, y bases de datos SQL y NoSQL, asegurando soluciones robustas y escalables.</p>
             </div>
         </div>
     </details>
@@ -152,23 +152,34 @@
 <!-- Enviar Pregunta -->
 <section class="faq-contact">
     <div class="contact-box">
-        <h3>¿No te pudimos ayudar?</h3>
-        <p>Contactanos y te responderemos cuanto antes.</p>
-        
-        <form class="contact-form">
-            <textarea 
-                placeholder="Escribe tu duda aquí..." 
-                rows="4" 
-                required
-            ></textarea>
-            <button type="submit" class="btn-submit">
-                Enviar mi duda
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="22" y1="2" x2="11" y2="13"></line>
-                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                </svg>
-            </button>
-        </form>
+        <img src="../assets/img/logosoporte-test.png" alt="Logo Soporte" height="50">
+
+        <input type="checkbox" id="enviar-toggle" hidden>
+
+        <h3 id="titulo-ayuda">¿No te pudimos ayudar?</h3>
+        <p id="subtitulo-ayuda">Contactanos y te responderemos cuanto antes.</p>
+
+<form class="contact-form">
+    <textarea 
+        placeholder="Escribe tu duda aquí..." 
+        rows="4" 
+        required
+    ></textarea>
+
+    <label for="enviar-toggle" class="btn-submit">
+        Enviar mi duda
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+    </label>
+</form>
+
+<div class="mensaje-ok">
+    <h3>¡Recibimos tu consulta!</h3>
+    <p>Te responderemos cuanto antes</p>
+</div>
+
     </div>
 </section>
 <!-- Fin Enviar Pregunta -->

@@ -4,25 +4,36 @@
 :root {
     /* Colores a usar en el body general*/
     --fondo-oscuro: #05070a;       
+    --fondo-secundario: #dadada0c;
     --azul-profundo: #0d121d;     
     --violeta-primario: #6366f1;   
     --violeta-brillante: #8b5cf6;  
     --texto-principal: #ffffff;
     --texto-secundario: #94a3b8;   
 }
+
 body{
     margin: 0;
     font-family: 'Google Sans Flex', sans-serif;
+    /* Fondo Con Imagen*/
+    background:
+      linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)),
+      url("../assets/img/fondo-test.png");
+
+    /*
     background-color: var(--fondo-oscuro);
-    /* Este degradado crea el efecto de iluminación técnica */
+
+    /* Este degradado crea el efecto de iluminación técnica 
     background-image: radial-gradient(circle at 10% 10%, #1e1b4b 0%, transparent 40%);
+    */
+    
     background-attachment: fixed;
     color: var(--texto-principal);
     min-height: 100vh;
 }
 
 header {
-    background-color: var(--azul-profundo);
+    background-color: transparent;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -87,9 +98,9 @@ header {
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 20px 50px;
-  background: var(--azul-profundo);
+  justify-content: center;
+  padding: 20px 0;
+  background: transparent;
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   position: sticky;
@@ -124,6 +135,15 @@ nav a::after {
   transition: width 0.3s ease;
 }
 
+/* Evitar subrayado en el logo */
+nav a img {
+  pointer-events: none;
+}
+
+nav a:has(img)::after {
+  display: none;
+}
+
 nav a:hover::after {
   width: 100%;
 }
@@ -132,14 +152,15 @@ nav a:hover::after {
 .navbar {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 60px;
   align-items: center;
 }
 
 .nav-left {
   display: flex;
   align-items: center;
-  flex: 1;
+  flex: 0;
 }
 
 nav ul {
@@ -149,13 +170,14 @@ nav ul {
   margin: 0;
   padding: 0;
   justify-content: center;
+  align-items: center;
 }
 
 .nav-right {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  flex: 1;
+  flex: 0;
 }
 
 /* Footer Premium */
