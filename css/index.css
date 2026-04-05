@@ -186,3 +186,67 @@ p {
     align-items: center;
     margin-bottom: 10px;    
 }
+
+@media (max-width: 768px) {
+    
+    .Presentacion {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .Titulo_Presentacion {
+        margin-right: 0;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    
+    .img_ImpulsAR {
+        width: 80%;
+        margin: 30px auto 0 auto;
+    }
+
+    
+    .Razones {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Razon {
+        width: 90%;
+        margin: 15px 0;
+    }
+
+   
+    .caja_Compromiso {
+        width: 95%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .texto_Titulo_Presentacion {
+        font-size: 32px; 
+    }
+
+    .texto_SubTitulo_Presentacion {
+        font-size: 20px;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .Presentacion p {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .Botones {
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    .Boton_Contacto_Servicio {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
