@@ -273,3 +273,99 @@
     display: block;
   }
   /* Fin Consulta Enviada */
+
+  
+
+  /* NUEVO */
+
+ /* NAV mobile (desactivado) */
+ .menu-toggle {
+  display: none;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+
+    /* HAMBURGUESA */
+    .menu-toggle {
+      display: block;
+      cursor: pointer;
+      font-size: 24px;
+      color: var(--color-text);
+    }
+
+    nav ul {
+      display: none;
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    /* Cuando el menú está activo */
+    #menu-toggle:checked ~ nav ul {
+      display: flex;
+    }
+
+    .navbar {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .nav-left {
+      justify-content: center;
+    }
+
+    /* TITULO */
+    .typing-text {
+      font-size: 24px;
+      margin: 30px 10px;
+    }
+
+    /* FAQ */
+    .faq-accordion {
+      padding: 10px 15px;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+      max-width: 100%;
+    }
+
+    .faq-trigger {
+      grid-template-columns: 30px 1fr 30px;
+      padding: 12px 15px;
+      gap: 10px;
+    }
+
+    .faq-trigger h3 {
+      font-size: 1rem;
+    }
+
+    .faq-panel-inner {
+      padding: 0 15px 15px 40px;
+      font-size: 0.9rem;
+    }
+
+    /* DIVIDER */
+    .divider {
+      padding: 40px 10px;
+      font-size: 0.8rem;
+    }
+
+    /* CONTACTO */
+    .contact-box {
+      padding: 30px 20px;
+    }
+
+    .contact-form textarea {
+      width: 80%;
+    }
+
+    .btn-submit {
+      width: 80%;
+    }
+
+  }
+    /* Fin Responsive */
