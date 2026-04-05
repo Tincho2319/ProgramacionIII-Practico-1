@@ -77,48 +77,74 @@ nav a {
     display: flex;
     flex-direction: row;
     margin: 5% 10%;
+    font-size: 2em;
 }
+.resaltado{
+    color:#9a76ee;
+    font-weight: bold;
+}
+/* FlexBox CEO */
 .CEO {
     font-family: "Google Sans Flex", sans-serif;
     color: white;
     display: flex;
     flex-direction: row;
-    margin: 5% 20%;
+    margin: 10% 15%;
+    padding: 30px;
     border-radius: 30px;
     transition: all 0.8s ease;
     overflow: hidden;
+}
+.CEOResaltado{
+    color:#9a76ee;
+}
+.CEOTexto{
+    margin-left: 10%;
+    font-size: 2em;
 }
 .CEO:hover{
     box-shadow: 0px 0px 10px 10px rgb(64, 31, 84);
 }
 .CEO img{
-    width: 100px;
+    width: 30%;
     height: auto;
-    margin-right: 20px;
+    border-radius: 30px;
 }
+/* FlexBox Mobile */
 .Mobile{
     font-family: "Google Sans Flex", sans-serif;
     color: white;
     display: flex;
     flex-direction: row-reverse;
-    margin: 5% 20%;
+    margin: 10% 15%;
+    padding: 30px;
     border-radius: 30px;
     transition: all 0.8s ease;
     overflow: hidden;
+}
+.MobileResaltado{
+    color:#9a76ee;
+}
+.MobileTexto{
+    margin-right: 10%;
+    font-size: 2em;
 }
 .Mobile:hover{
     box-shadow: 0px 0px 10px 10px rgb(64, 31, 84);
 }
 .Mobile img{
-    width: 100px;
+    width: 30%;
     height: auto;
+    border-radius: 30px;
 }
+/* FlexBox Web */
 .Web{
     font-family: "Google Sans Flex", sans-serif;
     color: white;
     display: flex;
     flex-direction: row;
-    margin: 5% 20%;
+    margin: 10% 15%;
+    padding: 30px;
     border-radius: 30px;
     transition: all 0.8s ease;
     overflow: hidden;
@@ -126,25 +152,42 @@ nav a {
 .Web:hover{
     box-shadow: 0px 0px 10px 10px rgb(64, 31, 84);
 }
-.Web img{
-    width: 100px;
-    height: auto;
-    margin-right: 20px;
+.WebResaltado{
+    color:#9a76ee;
 }
+.WebTexto{
+    margin-left: 10%;
+    font-size: 2em;
+}
+.Web img{
+    width: 30%;
+    height: auto;
+    border-radius: 30px;
+}
+/* FlexBox Web */
 .Cloud{
     font-family: "Google Sans Flex", sans-serif;
     color: white;
     display: flex;
     flex-direction: row-reverse;
-    margin: 5% 20%;
+    margin: 10% 15%;
+    padding: 30px;
     border-radius: 30px;
     transition: all 0.8s ease;
     overflow: hidden;
+}
+.CloudResaltado{
+    color:#9a76ee;
+}
+.CloudTexto{
+    margin-right: 10%;
+    font-size: 2em;
 }
 .Cloud:hover{
     box-shadow: 0px 0px 10px 10px rgb(64, 31, 84);
 }
 .Cloud img{
-    width: 100px;
+    width: 30%;
     height: auto;
+    border-radius: 30px;
 }
