@@ -43,7 +43,12 @@ ProgramacionIII-Practico-1/
 │   └── img/
 ├── css/
 │   ├── styles.css
-│   └── pedido.css
+│   ├── index.css
+│   ├── pedido.css
+│   ├── servicios.css
+│   ├── equipo.css
+│   ├── faq.css
+│   └── contacto.css
 └── pages/
     ├── servicios.html
     ├── equipo.html
@@ -58,10 +63,10 @@ ProgramacionIII-Practico-1/
 
 - [@fedeheinrich](https://github.com/fedeheinrich) - Federico Heinrich
 - [@Tincho2319](https://github.com/Tincho2319) - Martin Alcaraz
-- Nahuel Cappa
-- Matias Oviedo
-- Nicolas Espulef
-- Homero Colombo
+- [@Nahuelete](https://github.com/Nahuelete) - Nahuel Cappa
+- [@Oviedo-Matias](https://github.com/Oviedo-Matias) - Matias Oviedo
+- [@nicc-essp](https://github.com/nicc-essp) - Nicolas Espulef
+- [@HomeroColomboArg](https://github.com/HomeroColomboArg) - Homero Colombo
 
 ---
 

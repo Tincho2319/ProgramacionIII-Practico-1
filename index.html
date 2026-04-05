@@ -3,36 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon --->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <!-------------->
     <title>ImpulsAR</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
     <header>
-        <div class ="Titulo">
-                <div class="Logo">
-                    <img class="logo" src="assets\img\logo_ImpulsAR.jpeg" alt="Logo de ImpulsAR">
-                </div>
-            <div class ="caja_Titulo">
-                <h1 class="texto_Titulo">ImpulsAR</h1>
-                <h2 class="texto_Titulo">Desarrollo de Software</h2>
+        <nav class="navbar">
+            <div class="nav-left">
+                <img class="logo" src="assets/img/logocompleto-test.png" alt="Logo de ImpulsAR">
             </div>
-        </div>
-        <h3>Transformamos tus ideas en soluciones digitales</h3>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pages/servicios.html">Servicios</a></li>
+                <li><a href="pages/equipo.html">Equipo</a></li>
+                <li><a href="pages/pedido.html">Pedido</a></li>
+                <li><a href="pages/faq.html">FAQ</a></li>
+                <li><a href="pages/contacto.html">Contacto</a></li>
+            </ul>
+            <div class="nav-right"></div>
+        </nav>
     </header>
     
-<div>
-    <nav class="secciones">   
-        <a class="Home" href="index.html">Home</a>
-        <a class="Servicios"href="pages/servicios.html">Servicios</a>
-        <a class="Equipo"href="pages/equipo.html">Equipo</a>
-        <a class="Pedido"href="pages/pedido.html">Pedido</a>
-        <a class="Contacto"href="pages/contacto.html">Contacto</a>
-        <a class="Faq"href="pages/faq.html">Faq</a>
-    </nav>
-</div>
-
 <div class ="Presentacion">
     <div class ="Titulo_Presentacion">
         <h3 class="texto_Titulo_Presentacion">ImpulsAR</h3>
@@ -45,7 +45,7 @@
         para entender sus necesidades y objetivos, lo que nos permite crear productos personalizados
          que impulsan el éxito de sus negocios.</p>
     </div>
-    <img class="img_ImpulsAR" src="assets\img\img_equipo.png" alt="Imagen representativa de ImpulsAR">
+    <img class="img_ImpulsAR" src="assets/img/img_equipo.png" alt="Imagen representativa de ImpulsAR">
 </div>
 
 <nav class ="Botones">
@@ -76,7 +76,7 @@
 <div class ="ComenzarProyecto">
     <p>Contactanos hoy y descubre cómo podemos ayudarte a impulsar tu proyecto.</p>
     <div class="Botones">
-        <a class="Boton_Contacto_Servicio" href="pages/pedidos.html">Solicitar Servicio</a>
+        <a class="Boton_Contacto_Servicio" href="pages/pedido.html">Solicitar Servicio</a>
         <a class="Boton_Contacto_Servicio" href="pages/faq.html">Ver Preguntas Frecuentes</a>
     </div>
 </div>
@@ -85,14 +85,14 @@
     <h3 class="Compromiso_Titulo">Comprometidos con tu éxito</h3>
     <div class ="caja_Compromiso">
         <div class ="caja_check">
-            <img src="/assets/img/check.png" alt="check de verificacion" class="check">
+            <img src="assets/img/check.png" alt="check de verificacion" class="check">
         <h4 class="Compromiso_Sub_Titulo">Desarrollo a medida</h4>
         </div>
         <p class="Compromiso_Texto">Cada proyecto es único. Creamos soluciones personalizadas que se adaptan perfectamente a las necesidades de tu negocio.</p>
     </div>
     <div class ="caja_Compromiso">
         <div class ="caja_check">
-            <img src="/assets/img/check.png" alt="check de verificacion" class="check">
+            <img src="assets/img/check.png" alt="check de verificacion" class="check">
         <h4 class="Compromiso_Sub_Titulo">Soporte Continuo</h4>
         </div>
         <p class="Compromiso_Texto">No te dejamos solo después del lanzamiento. Ofrecemos soporte técnico y mantenimiento para garantizar el éxito de tu proyecto.</p>
@@ -100,7 +100,7 @@
 
     <div class ="caja_Compromiso">
         <div class ="caja_check">
-        <img src="/assets/img/check.png" alt="check de verificacion" class="check">
+        <img src="assets/img/check.png" alt="check de verificacion" class="check">
         <h4 class="Compromiso_Sub_Titulo">Experiencia Comprobada</h4>
         </div>
         <p class="Compromiso_Texto">Contamos con años de experiencia en el desarrollo de software y hemos ayudado a numerosas empresas a alcanzar sus objetivos digitales.</p>
@@ -109,28 +109,28 @@
 </div>
 </body>
 
-<footer> 
+<footer>
     <div>
-        <img src="/assets/img/logocompleto-test.png" alt="Logo" class="logo" height="40">
+        <img src="assets/img/logocompleto-test.png" alt="Logo de ImpulsAR" class="logo">
         <p id="descripcion-footer">Empresa líder en desarrollo de software a medida. Creamos soluciones innovadoras que impulsan el crecimiento de tu negocio.</p>
     </div>
 
     <div>
-        <h3 id="txt-enlacesRapidos"><i class="fa-solid fa-link"></i>Enlaces Rápidos</h3>
+        <h3 id="txt-enlacesRapidos">Enlaces Rápidos</h3>
         <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="../servicios.html">Servicios</a></li>
-            <li><a href="../equipo.html">Equipo</a></li>
-            <li><a href="../pedido.html">Solicitar Servicio</a></li>
-            <li><a href="../faq.html">Preguntas Frecuentes</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pages/servicios.html">Servicios</a></li>
+            <li><a href="pages/equipo.html">Equipo</a></li>
+            <li><a href="pages/pedido.html">Pedido</a></li>
+            <li><a href="pages/faq.html">FAQ</a></li>
         </ul>
     </div>
 
     <div>
-        <h3 id="txt-contacto"><i class="fa-solid fa-at"></i>Contacto</h3>
-        <p id="txt-email"><i class="fa-duotone fa-solid fa-envelope"></i>info@impulsar.com</p>
-        <p id="txt-telefono"><i class="fa-solid fa-phone"></i>+54 11 1234-5678</p>
-        <address id="txt-direccion"><i class="fa-solid fa-location-dot"></i>Bahia Blanca, Argentina</address>
+        <h3 id="txt-contacto">Contacto</h3>
+        <p id="txt-email"><i class="fa-solid fa-envelope"></i> info@impulsar.com</p>
+        <p id="txt-telefono"><i class="fa-solid fa-phone"></i> +54 11 1234-5678</p>
+        <address id="txt-direccion"><i class="fa-solid fa-location-dot"></i> Bahia Blanca, Argentina</address>
         <div class="redes-sociales">
             <a href="#"><i class="fa-brands fa-linkedin"></i></a>
             <a href="#"><i class="fa-brands fa-github"></i></a>
@@ -138,4 +138,5 @@
         </div>
     </div>
     <p>© 2026 Impulsar. Todos los derechos reservados.</p>
+</footer>
 </html>
