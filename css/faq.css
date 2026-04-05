@@ -1,0 +1,275 @@
+/* Se paso el NAV a styles.css ya que sera el formato que se aplique por igual a todas las paginas */
+/* Titulo Animado */
+.typing-text {
+    font-size: 33px;
+    color: var(--color-text);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 80px;
+    margin-top: 50px;
+  }
+  
+  .words {
+    display: inline-block;
+    align-items: center;
+    overflow: hidden;
+    height: 1.170em;
+    vertical-align: bottom;
+    color: var(--violeta-brillante);
+  }
+  
+  .words span {
+    display: block;
+    height: 100%;
+    animation: changeWords 8s ease-in-out infinite;
+  }
+  
+  @keyframes changeWords {
+    0% { transform: translateY(0%); }
+    25% { transform: translateY(-100%); }
+    50% { transform: translateY(-200%); }
+    75% { transform: translateY(-300%); }
+    100% { transform: translateY(-300%); }
+  }
+  /* Fin Titulos */
+
+
+/* Preguntas Frecuentes */
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 40px;
+}
+
+.faq-item {
+  background: var(--fondo-secundario);
+  border: 1px solid #fefefe11;
+  border-radius: 16px;
+  margin: 0 auto;
+  max-width: 850px;
+  backdrop-filter: blur(10px);
+  transition: transform .3s, box-shadow .3s, border-color .3s;
+  margin-bottom: 30px;
+  color: var(--color-text);
+}
+
+.faq-item:hover {
+  transform: translateY(-3px);
+  border-color: var(--violeta-brillante);
+}
+
+.faq-item[open] {
+  border-color: var(--violeta-brillante);
+  box-shadow: 0 0 0 1px rgba(181,82,159,.3), 0 10px 30px rgba(0,0,0,.3), 0 0 25px rgba(181,82,159,.15);
+}
+
+/* Trigger */
+.faq-trigger {
+  list-style: none;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 40px 1fr 40px;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+  user-select: none;
+}
+
+/* Número */
+.faq-number {
+  font: bold .9rem monospace;
+  color: grey;
+}
+
+.faq-item:hover .faq-number,
+.faq-item[open] .faq-number { color: var(--violeta-brillante); }
+
+/* Pregunta */
+.faq-trigger h3 { font-size: 1.15rem; font-weight: 600; color: var(--texto-principal); }
+
+/* Ícono */
+.faq-icon { display: flex; justify-content: center; align-items: center; color: grey; }
+.chevron-down { transition: transform .4s, color .4s; }
+.faq-item:hover .faq-icon { color: var(--texto-principal); }
+.faq-item[open] .chevron-down { transform: rotate(180deg); color: var(--texto-principal); }
+
+/* Panel */
+.faq-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows .4s;
+  overflow: hidden;
+}
+.faq-item[open] .faq-panel { grid-template-rows: 1fr; }
+
+.faq-panel-inner {
+  min-height: 0;
+  padding: 0 20px 20px 50px;
+  color: var(--texto-secundario);
+  font-size: 0.95rem;
+  font-weight: bold;
+  letter-spacing: .01em;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity .4s, transform .4s;
+}
+.faq-item[open] .faq-panel-inner { opacity: 1; transform: none; }
+/* Fin Preguntas Frecuentes */
+
+/* Divisor */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+    padding: 80px;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .divider span {
+    margin: 0 15px;
+  }
+/* Fin Divisor */
+
+/* Enviar Pregunta */
+.faq-contact {
+    display: flex;
+    justify-content: center;
+    padding: 30px 30px;
+  }
+  
+  /* caja principal */
+  .contact-box {
+    width: 100%;
+    max-width: 800px;
+  
+    background: var(--fondo-secundario);
+    border: 1px solid #fefefe11;
+    border-radius: 16px;
+  
+    backdrop-filter: blur(10px);
+  
+    padding: 50px 40px;
+  
+    text-align: center;
+  }
+  
+  /* título */
+  .contact-box h3 {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    color: var(--texto-principal);
+  }
+  
+  /* subtítulo */
+  .contact-box p {
+    color: var(--texto-secundario);
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+  }
+  
+  /* form */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  /* textarea */
+.contact-form textarea {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    resize: none;
+    text-align: left;
+  
+    padding: 16px;
+    border-radius: 10px;
+  
+    border: 1px solid #fefefe11;
+    background: rgba(255, 255, 255, 0.02);
+  
+    color: var(--texto-principal);
+    font-size: 0.95rem;
+  
+    outline: none;
+    transition: border 0.2s ease;
+  }
+  
+  /* focus */
+  .contact-form textarea:focus {
+    border-color: var(--texto-secondary);
+    background: rgba(255, 255, 255, 0.04);
+  }
+  
+  /* botón */
+  .btn-submit {
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 8px;
+
+    padding: 14px 18px;
+    border-radius: 10px;
+
+    border: 1px solid var(--texto-secondary);
+    cursor: pointer;
+
+    font-weight: 500;
+    color: var(--texto-principal);
+
+    background: rgba(255, 255, 255, 0.04);
+
+    backdrop-filter: blur(8px);
+
+    transition: all 0.25s ease;
+  }
+  
+  /* hover */
+  .btn-submit:hover {
+    background: linear-gradient(135deg, var(--violeta-primario), var(--violeta-brillante));
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--texto-secondary);
+  }
+  
+  /* icono */
+  .btn-submit svg {
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    opacity: 0.8;
+  }
+
+  .btn-submit:hover svg {
+    transform: translateX(3px);
+    opacity: 1;
+  }
+  /* Fin Enviar Pregunta */
+
+  /* Consulta Enviada */
+  .mensaje-ok {
+    display: none;
+
+  }
+  
+  /* Oculta el form */
+  #enviar-toggle:checked ~ #titulo-ayuda,
+  #enviar-toggle:checked ~ #subtitulo-ayuda,
+  #enviar-toggle:checked ~ .contact-form {
+    display: none;
+  }
+  
+  /* Muestra el mensaje */
+  #enviar-toggle:checked ~ .mensaje-ok {
+    display: block;
+  }
+  /* Fin Consulta Enviada */

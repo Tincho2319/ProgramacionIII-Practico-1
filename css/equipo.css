@@ -1,0 +1,150 @@
+/* Nav General */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 30px 30px;
+
+  background: transparent;
+  backdrop-filter: blur(10px);
+
+  /* Linea Divisora (Opcional) */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Nav Hover */
+nav a:hover {
+    color: white;
+  }
+  
+  /* Línea animada */
+  nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+  
+    width: 0%;
+    height: 3px;
+  
+    background: linear-gradient(90deg, #4F46E5, #B5529F);
+    border-radius: 3px;
+  
+    transition: width 0.3s ease;
+  }
+  
+  nav a:hover::after {
+    width: 100%;
+  }
+  /* Fin Nav General */
+
+
+/* Nav Left */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/* Fin Nav Left */
+
+/* Nav Center */
+nav ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Links */
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: #b6bcc6;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+/* Fin Nav Center */
+.--Introducción--{
+    font-family: "Google Sans Flex", sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    margin: 5% 10%;
+}
+.CEO {
+    font-family: "Google Sans Flex", sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    margin: 5% 20%;
+    border-radius: 30px;
+    transition: all 0.8s ease;
+    overflow: hidden;
+}
+.CEO:hover{
+    box-shadow: 0px 0px 10px 10px rgb(64, 31, 84);
+}
+.CEO img{
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+.Mobile{
+    font-family: "Google Sans Flex", sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 5% 20%;
+    border-radius: 30px;
+    transition: all 0.8s ease;
+    overflow: hidden;
+}
+.Mobile:hover{
+    box-shadow: 0px 0px 10px 10px rgb(64, 31, 84);
+}
+.Mobile img{
+    width: 100px;
+    height: auto;
+}
+.Web{
+    font-family: "Google Sans Flex", sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    margin: 5% 20%;
+    border-radius: 30px;
+    transition: all 0.8s ease;
+    overflow: hidden;
+}
+.Web:hover{
+    box-shadow: 0px 0px 10px 10px rgb(64, 31, 84);
+}
+.Web img{
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+.Cloud{
+    font-family: "Google Sans Flex", sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 5% 20%;
+    border-radius: 30px;
+    transition: all 0.8s ease;
+    overflow: hidden;
+}
+.Cloud:hover{
+    box-shadow: 0px 0px 10px 10px rgb(64, 31, 84);
+}
+.Cloud img{
+    width: 100px;
+    height: auto;
+}
