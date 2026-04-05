@@ -2,20 +2,25 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Servicios</title>
-    <link rel="icon" href="../assets/favicon/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <!-------------->
+    <title>Servicios - ImpulsAR</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/servicios.css">
 </head>
 
 <body>
     <header>
-        <section>
-            <h1 class="Titulo"><a href="../index.html">Impulsar</a></h1>
-            <h2>Servicios - Impulsar</h2>
-        </section>
-        
         <nav class="navbar">
+            <div class="nav-left">
+                <a href="../index.html"><img class="logo" src="../assets/img/logocompleto-test.png" alt="Logo de ImpulsAR"></a>
+            </div>
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="servicios.html">Servicios</a></li>
@@ -24,10 +29,11 @@
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
+            <div class="nav-right"></div>
         </nav>
     </header>
 
-    <main>
+    <main class="container">
         <div class="form-grid">
             <section class="campo">
                 <img src="../assets/img/servicios_img/image_test.jpg" alt="img_desarrollo_web">
@@ -45,8 +51,10 @@
                     <li>Alta Performance</li>
                 </ul>
                 <hr>
-                <p>Desde $5.000 USD</p>
-                <a href="pedido.html">Solicitar</a>
+                <div class="foot-solicitar">
+                    <p class="precio">Desde $5.000 USD</p>
+                    <a href="pedido.html" class="solicitar">Solicitar ---></a>
+                </div>
             </section>
 
             <section class="campo">
@@ -64,8 +72,10 @@
                     <li>Push Notifications</li>
                 </ul>
                 <hr>
-                <p>Desde $8.000 USD</p>
-                <a href="pedido.html">Solicitar</a>
+                <div class="foot-solicitar">
+                    <p class="precio">Desde $8.000 USD</p>
+                    <a href="pedido.html" class="solicitar">Solicitar ---></a>
+                </div>
             </section>
 
             <section class="campo">
@@ -83,8 +93,10 @@
                     <li>Monitoreo 24/7</li>
                 </ul>
                 <hr>
-                <p>Desde $6.000 USD</p>
-                <a href="pedido.html">Solicitar</a>
+                <div class="foot-solicitar">
+                    <p class="precio">Desde $6.000 USD</p>
+                    <a href="pedido.html" class="solicitar">Solicitar ---></a>
+                </div>
             </section>
 
             <section class="campo">
@@ -102,8 +114,10 @@
                     <li>Capacitación</li>
                 </ul>
                 <hr>
-                <p>Consultar</p>
-                <a href="pedido.html">Solicitar</a>
+                <div class="foot-solicitar">
+                    <p class="precio">Consultar</p>
+                    <a href="pedido.html" class="solicitar">Solicitar ---></a>
+                </div>
             </section>
 
             <section class="campo">
@@ -121,8 +135,10 @@
                     <li>Alta Disponibilidad</li>
                 </ul>
                 <hr>
-                <p>Desde $3.500 USD</p>
-                <a href="pedido.html">Solicitar</a>
+                <div class="foot-solicitar">
+                    <p class="precio">Desde $3.500 USD</p>
+                    <a href="pedido.html" class="solicitar">Solicitar ---></a>
+                </div>
             </section>
 
             <section class="campo">
@@ -140,8 +156,10 @@
                     <li>Certificaciones SSL</li>
                 </ul>
                 <hr>
-                <p>Desde $2.500 USD</p>
-                <a href="pedido.html">Solicitar</a>
+                <div class="foot-solicitar">
+                    <p class="precio">Desde $2.500 USD</p>
+                    <a href="pedido.html" class="solicitar">Solicitar ---></a>
+                </div>
             </section>
         </div>
         <hr>
@@ -151,35 +169,34 @@
         </section>
     </main>
 
-    <footer>
+    <footer> 
         <div>
-            <h3><i class="fa-solid fa-code"></i> Impulsar</h3>
-            <p>Empresa líder en desarrollo de software a medida. Creamos soluciones innovadoras que impulsan el crecimiento de tu negocio.</p>
+            <img src="../assets/img/logocompleto-test.png" alt="Logo de ImpulsAR" class="logo">
+            <p id="descripcion-footer">Empresa líder en desarrollo de software a medida. Creamos soluciones innovadoras que impulsan el crecimiento de tu negocio.</p>
         </div>
 
         <div>
-            <h3>Enlaces Rápidos</h3>
+            <h3 id="txt-enlacesRapidos">Enlaces Rápidos</h3>
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../servicios.html">Servicios</a></li>
-                <li><a href="../equipo.html">Equipo</a></li>
-                <li><a href="../pedido.html">Solicitar Servicio</a></li>
-                <li><a href="../faq.html">Preguntas Frecuentes</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="equipo.html">Equipo</a></li>
+                <li><a href="pedido.html">Pedido</a></li>
+                <li><a href="faq.html">FAQ</a></li>
             </ul>
         </div>
 
         <div>
-            <h3>Contacto</h3>
-            <p>info@impulsar.com</p>
-            <p>+54 11 1234-5678</p>
-            <address>Bahia Blanca, Argentina</address>
+            <h3 id="txt-contacto">Contacto</h3>
+            <p id="txt-email"><i class="fa-solid fa-envelope"></i> info@impulsar.com</p>
+            <p id="txt-telefono"><i class="fa-solid fa-phone"></i> +54 11 1234-5678</p>
+            <address id="txt-direccion"><i class="fa-solid fa-location-dot"></i> Bahia Blanca, Argentina</address>
             <div class="redes-sociales">
                 <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="#"><i class="fa-brands fa-github"></i></a>
                 <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
             </div>
         </div>
-
         <p>© 2026 Impulsar. Todos los derechos reservados.</p>
     </footer>
 </body>

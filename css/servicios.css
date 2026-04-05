@@ -1,26 +1,14 @@
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
 
-.Titulo a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.Titulo a:visited {
-  color: inherit;
-}
-
-.Titulo a:hover {
-  opacity: 0.8;
+.container {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 40px;
 }
 
 .form-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 🔥 3 columnas */
-  gap: 20px; /* espacio entre campos */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 .campo {
@@ -31,21 +19,43 @@ header {
   transition: all 0.3s ease;
 }
 
-/*Navbar temporal*/
-
-.navbar ul {
-  list-style: none;
+.foot-solicitar {
   display: flex;
-  justify-content: center;
-  padding: 10px 0;
-  margin: 0;
-}
-.navbar li {
-  margin: 0 15px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
-.navbar a {
+.foot-solicitar p {
+  margin: 5px;
+}
+
+.foot-solicitar a {
+  display: inline-block;
+}
+
+.solicitar {
+  color: lightskyblue;
   text-decoration: none;
-  color: white;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.solicitar:visited {
+  color: lightskyblue;
+}
+
+.solicitar:hover {
+  color: lightskyblue;
+  opacity: 0.8;
+}
+
+.solicitar:active {
+  color: lightskyblue;
+}
+
+.precio {
+  font-size: 20px;
+  font-weight: 700;
+  color: lightskyblue;
 }
