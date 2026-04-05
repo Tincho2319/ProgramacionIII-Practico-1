@@ -9,7 +9,12 @@
     --violeta-primario: #6366f1;   
     --violeta-brillante: #8b5cf6;  
     --texto-principal: #ffffff;
-    --texto-secundario: #94a3b8;   
+    --texto-secundario: #94a3b8;
+    --texto-terciario: rgb(0, 0, 0);   
+    --rosa-impulsar: #B5529F;
+    --violeta-impulsar: #4F46E5;
+    --gris-impulsar: rgba(255, 255, 255, 0.03);
+    --violeta-dark: rgba(139, 92, 246, 0.3);
 }
 
 body{

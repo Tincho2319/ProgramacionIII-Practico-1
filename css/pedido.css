@@ -1,5 +1,8 @@
 main > section:first-child {
-    background: linear-gradient(135deg, var(--violeta-primario), var(--violeta-brillante));
+    background: var(--gris-impulsar);
+    border: 1px solid var(--gris-impulsar);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
     color: var(--texto-principal);
     padding: 60px 40px;
     text-align: center;
@@ -14,7 +17,7 @@ main > section:first-child h1 {
 main > section:first-child p {
     font-size: 1.1rem;
     margin: 0;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--texto-principal);
     max-width: 700px;
     margin: 0 auto;
 }
@@ -28,9 +31,11 @@ main {
 
 /* === FORMULARIO === */
 form {
-    background-color: var(--azul-profundo);
+    background: var(--gris-impulsar);
+    border: 1px solid var(--gris-impulsar);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);          
     padding: 40px;
-    border-radius: 8px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -84,14 +89,14 @@ input[type="tel"],
 input[type="date"],
 select,
 textarea {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 2px solid var(--violeta-primario);
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid var(--gris-impulsar);
+    background: var(--gris-impulsar);
     color: var(--texto-principal);
-    padding: 12px;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-family: inherit;
-    transition: border-color 0.3s ease, background-color 0.3s ease;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.2s ease;    
 }
 
 input[type="text"]:focus,
@@ -102,20 +107,26 @@ select:focus,
 textarea:focus {
     outline: none;
     border-color: var(--violeta-brillante);
-    background-color: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
+    background-color: var(--gris-impulsar);
+    box-shadow: 0 0 10px var(--violeta-dark);
+}
+
+/* === ICONO CALENDARIO === */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
 }
 
 /* === SELECT (DROPDOWN) === */
 select {
-    background-color: rgba(255, 255, 255, 0.15) !important;
+    background-color: var(--gris-impulsar) !important;
     color: var(--texto-principal) !important;
     cursor: pointer;
 }
 
 select option {
-    background-color: var(--azul-profundo);
-    color: var(--texto-principal);
+    background-color: var(--texto-principal);
+    color: var(--texto-terciario);
 }
 
 select option:checked {
@@ -166,7 +177,7 @@ fieldset > div {
 }
 
 fieldset > div:hover {
-    background-color: rgba(99, 102, 241, 0.1);
+    background-color: var(--gris-impulsar);
 }
 
 fieldset label {
@@ -178,34 +189,27 @@ fieldset label {
 
 /* === BOTONES === */
 button {
-    background-color: var(--violeta-primario);
-    color: var(--texto-principal);
-    border: none;
-    padding: 14px 35px;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-right: 10px;
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid var(--gris-impulsar);
+  cursor: pointer;
+  color: var(--texto-principal);
+  background: var(--gris-impulsar);
+  transition: all 0.25s ease;
 }
 
 button:hover {
-    background-color: var(--violeta-brillante);
+    background: linear-gradient(90deg, var(--rosa-impulsar), var(--violeta-impulsar));
     transform: translateY(-2px);
 }
 
 button:active {
     transform: translateY(0);
-}
-
-button[type="reset"] {
-    background-color: var(--texto-secundario);
-    color: var(--azul-profundo);
-}
-
-button[type="reset"]:hover {
-    background-color: var(--texto-principal);
 }
 
 form > button {
@@ -237,7 +241,8 @@ main > section:last-child {
 main > section:last-child h2 {
     color: var(--texto-principal);
     font-size: 1.8rem;
-    margin-bottom: 20px;
+    margin-top: -10px;
+    margin-bottom: 30px;
 }
 
 main > section:last-child ol {
