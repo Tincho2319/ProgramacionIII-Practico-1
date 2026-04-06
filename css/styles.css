@@ -1,6 +1,10 @@
 /* Fuente Google Sans Flex*/
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 :root {
     /* Colores a usar en el body general*/
     --fondo-oscuro: #05070a;       
@@ -189,7 +193,7 @@ nav ul {
 footer {
   width: 100%;
   padding: 50px 20px 20px;
-  background-color: var(--azul-profundo);
+  background-color: transparent;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   color: white;
   display: grid;
@@ -327,13 +331,21 @@ footer a:hover {
 /* Responsividad */
 @media (max-width: 900px) {
   nav { padding: 15px 20px; }
-  nav ul { display: none; }
-  
+  /* Borre nav ul {display: none} por que afectaba a mi diseño responsivo haciendo que el menu no se muestre*/
   footer {
     grid-template-columns: 1fr;
     text-align: center;
-    gap: 30px;
+    gap: 20px; /* Reducido de 30px para juntar los bloques (Flecha superior) */
     padding: 30px 20px 20px;
+  }
+  
+  footer > p {
+    margin-top: 20px; /* Reducido de 40px para subir el copyright (Flecha inferior) */
+    padding-top: 15px;
+  }
+  
+  footer .redes-sociales {
+    margin-top: 15px; /* Un poco mas cerca de la direccion */
   }
   
   #txt-enlacesRapidos, #txt-contacto, .redes-sociales, footer li, #txt-email, #txt-telefono, #txt-direccion {

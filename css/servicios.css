@@ -1,0 +1,67 @@
+.container {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 40px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.campo {
+  border: 1px solid #2a2f45;
+  padding: 15px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.02);
+  transition: all 0.3s ease;
+  max-height: 480px;
+}
+
+.foot-solicitar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.foot-solicitar p {
+  margin: 5px;
+}
+
+.foot-solicitar a {
+  display: inline-block;
+}
+
+.solicitar {
+  color: lightskyblue;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.solicitar:visited {
+  color: lightskyblue;
+}
+
+.solicitar:hover {
+  color: lightskyblue;
+  opacity: 0.8;
+}
+
+.solicitar:active {
+  color: lightskyblue;
+}
+
+.precio {
+  font-size: 20px;
+  font-weight: 700;
+  color: lightskyblue;
+}
+
+img {
+  width: 100%;
+  height: 30%;
+  object-fit: cover;
+}
