@@ -225,6 +225,9 @@ p {
 
 
 @media (max-width: 480px) {
+    nav ul {
+        display: none;
+    }   
     .texto_Titulo_Presentacion {
         font-size: 32px; 
     }
