@@ -15,12 +15,12 @@ function insertarHeader() {
             </div>
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="equipo.html">Equipo</a></li>
-                <li><a href="pedido.html">Pedido</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="../pages/servicios.html">Servicios</a></li>
+                <li><a href="../pages/equipo.html">Equipo</a></li>
+                <li><a href="../pages/pedido.html">Pedido</a></li>
+                <li><a href="../pages/faq.html">FAQ</a></li>
+                <li><a href="../pages/contacto.html">Contacto</a></li>
+                <li><a href="../pages/login.html">Login</a></li>
             </ul>
             <div class="nav-right"></div>
         </nav>
