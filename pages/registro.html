@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-AR">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,32 +11,33 @@
     <link rel="icon" href="../assets/favicon/logo-cine.png" />
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/registro.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body class="registro-body">
     <div class="lluvia"></div>
 
-    <header class="header registro-header">
-        <div class="nav-logo registro-logo">
-            <img src="../assets/img/logo-completo.png" alt="Logo Cine Aurora" />
+<header>
+      <nav class="navbar">
+        <div class="nav-left">
+          <a href="../index.html"
+            ><img
+              class="logo"
+              src="../assets/img/logocompleto-test.png"
+              alt="Logo de ImpulsAR"
+          /></a>
         </div>
-
-        <nav class="nav registro-nav">
-            <a href="../index.html">Inicio</a>
-            <a href="./estrenos.html">Próximos estrenos</a>
-            <a href="../index.html">Volver</a>
-        </nav>
-
-        <div class="registro-header-actions">
-            <a href="./login.html" class="registro-login-btn">Iniciar sesión</a>
-
-            <a href="../index.html" class="nav-exit registro-exit">
-                <span class="exit-icon">
-                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
-                </span>
-                <span class="exit-text">Cerrar sesión</span>
-            </a>
-        </div>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="../pages/servicios.html">Servicios</a></li>
+          <li><a href="../pages/equipo.html">Equipo</a></li>
+          <li><a href="../pages/pedido.html">Pedido</a></li>
+          <li><a href="../pages/faq.html">FAQ</a></li>
+          <li><a href="../pages/contacto.html">Contacto</a></li>
+          <li><a href="pages/login.html">Iniciar sesión</a><i class="fa-regular fa-circle-user"></i></li>
+        </ul>
+        <div class="nav-right"></div>
+      </nav>
     </header>
 
     <main class="registro-main">
