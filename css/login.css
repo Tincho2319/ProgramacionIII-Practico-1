@@ -1,0 +1,119 @@
+.Fondo {
+    background: #000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center;     /* Centrado vertical */
+    min-height: 100vh;      /* Ocupa toda la pantalla */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Glows principales y secundarios (Sin cambios, funcionan perfecto) */
+.Fondo::before, .Fondo::after {
+    content: "";
+    position: fixed;
+    filter: blur(120px);
+    z-index: -1;
+}
+
+.Fondo::before {
+    width: 600px;
+    height: 600px;
+    top: 20%;
+    left: 30%;
+    background: radial-gradient(circle, #dfdddd, transparent 50%);
+    animation: moveGlow 8s ease-in-out infinite alternate;
+}
+
+.Fondo::after {
+    width: 500px;
+    height: 500px;
+    top: 60%;
+    left: 60%;
+    background: radial-gradient(circle, #8a8a8a, transparent 50%);
+    animation: moveGlow2 10s ease-in-out infinite alternate;
+}
+
+/* 2. Contenedor Main (Eliminamos el padding para centrar) */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* 3. Tarjeta de Login */
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 350px; /* Tamaño fijo para que no se deforme */
+    height: auto;
+    padding: 40px;
+    border-radius: 20px;
+    font-family: "Raleway", sans-serif; /* Tipografía del proyecto */
+    background-color: rgba(255, 255, 255, 0.05); /* Glassmorphism suave */
+    backdrop-filter: blur(10px); /* Refuerza el efecto de vidrio */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #cccccc;
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+}
+
+/* 4. Inputs y Etiquetas */
+.Email, .Contraseña {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 8px;
+}
+
+.login input {
+    height: 40px;
+    width: 100%;
+    padding: 0 15px;
+    border-radius: 10px;
+    background-color: rgba(204, 204, 204, 0.1);
+    border: solid 1px rgba(204, 204, 204, 0.2);
+    color: white;
+    transition: all 0.4s ease;
+    box-sizing: border-box;
+}
+
+.login input:focus {
+    outline: none;
+    border-color: #dfdddd;
+    background-color: rgba(204, 204, 204, 0.2);
+}
+
+/* 5. Botón */
+button {
+    height: 45px;
+    width: 100%;
+    margin-top: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: rgba(204, 204, 204, 0.2);
+    border: solid 1px rgba(204, 204, 204, 0.3);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Animaciones originales */
+@keyframes moveGlow { from { transform: translate(-50px, -50px); } to { transform: translate(50px, 50px); } }
+@keyframes moveGlow2 { from { transform: translate(50px, -50px); } to { transform: translate(-50px, 50px); } }

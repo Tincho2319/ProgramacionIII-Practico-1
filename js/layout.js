@@ -20,7 +20,7 @@ function insertarHeader() {
                 <li><a href="pedido.html">Pedido</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="pages/login.html">Login</a></li>
+                <li><a href="login.html">Login</a></li>
             </ul>
             <div class="nav-right"></div>
         </nav>
