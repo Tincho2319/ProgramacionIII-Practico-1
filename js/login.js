@@ -1,11 +1,11 @@
-const API_URL_LOGIN = "https://impulsar-webapi-64jf.onrender.com/login"; 
+const API_URL = "https://impulsar-webapi-64jf.onrender.com/auth/login";
 
 document.addEventListener('DOMContentLoaded', () => {
     const formLogin = document.getElementById('form-login');
 
     if (formLogin) {
         formLogin.addEventListener('submit', async (e) => {
-            e.preventDefault();
+            e.preventDefault(); // Evita el error 405 y la recarga de página
 
             const datos = {
                 email: document.getElementById('txt-email').value,
@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             try {
-                const respuesta = await fetch(API_URL_LOGIN, {
-                    method: 'POST',
+                const respuesta = await fetch(API_URL, {
+                    method: 'POST', 
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(datos)
                 });
@@ -22,16 +22,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 const resultado = await respuesta.json();
 
                 if (respuesta.ok && resultado.msg === "Correcto") {
-                    alert(`¡Bienvenido ${resultado.usuario}! Datos correctos.`);
-                    // Redirigir al perfil
-                    window.location.href = "perfil.html";
+                    // Si los datos en usuarios.json coinciden
+                    alert(`¡Bienvenido ${resultado.usuario || ''}!`);
+                    window.location.href = "index.html"; 
                 } else {
-                    alert("Usuario o contraseña incorrectos. Intente de nuevo.");
+                    alert("Email o contraseña incorrectos.");
                 }
 
             } catch (error) {
-                console.error("Error al conectar con el servidor:", error);
-                alert("Hubo un error en la conexión con el servidor.");
+                console.error("Error de conexión con Render:", error);
+                alert("No se pudo conectar con el servidor. Verifique su conexión.");
             }
         });
     }
