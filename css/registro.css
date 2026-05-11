@@ -1,5 +1,5 @@
 .registro-body {
-  background: #000;
+  background: var(--azul-profundo);
   position: relative;
   overflow-x: hidden;
   display: flex;
@@ -22,7 +22,7 @@
   height: 600px;
   top: 20%;
   left: 30%;
-  background: radial-gradient(circle, #ffcc00, transparent 50%);
+  background: radial-gradient(circle, var(--rosa-impulsar), transparent 50%);
   animation: moveGlow 8s ease-in-out infinite alternate;
 }
 
@@ -31,7 +31,7 @@
   height: 500px;
   top: 60%;
   left: 60%;
-  background: radial-gradient(circle, #ff4d4d, transparent 50%);
+  background: radial-gradient(circle, var(--violeta-brillante), transparent 50%);
   animation: moveGlow2 10s ease-in-out infinite alternate;
 }
 
@@ -312,15 +312,15 @@
 }
 
 .dropdown-content a {
-  color: #f5c518;
+  color: var(--texto-primario);
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
 }
 
 .dropdown-content a:hover {
-  color: #ffffff;
-  text-shadow: 0 0 8px #f5c518;
+  color: var(--rosa-impulsar);
+  text-shadow: 0 0 8px var(--rosa-impulsar);
 }
 
 .linea-terminos {
