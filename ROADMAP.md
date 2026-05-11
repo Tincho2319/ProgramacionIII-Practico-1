@@ -22,7 +22,7 @@ Este documento detalla la planificación y distribución de tareas para el desar
 - [x] 🔴 **[OBLIGATORIO]** Inicializar el proyecto Node.js (`npm init`).
 - [x] 🔴 **[OBLIGATORIO]** Crear estructura de carpetas (`controllers`, `data`, `models`, `routes`) y archivos base.
 - [x] 🔴 **[OBLIGATORIO]** Instalar dependencias.
-- [ ] 🔴 **[OBLIGATORIO]** Realizar deploy inicial de la API en Render.
+- [x] 🔴 **[OBLIGATORIO]** Realizar deploy inicial de la API en Render.
 - [ ] 🔴 **[OBLIGATORIO]** Desarrollar endpoint `GET /perfil/:id`.
 - [ ] 🔴 **[OBLIGATORIO]** Crear el archivo JSON base simulando los datos del usuario logueado.
 
@@ -63,7 +63,7 @@ Este documento detalla la planificación y distribución de tareas para el desar
 ---
 
 ## ⚙️ Requisitos Técnicos Clave (Bloqueantes)
-- [ ] 🔴 **[OBLIGATORIO]** API desplegada en Render.
-- [ ] 🔴 **[OBLIGATORIO]** Front-end desplegado en GitHub Pages.
+- [x] 🔴 **[OBLIGATORIO]** API desplegada en Render.
+- [x] 🔴 **[OBLIGATORIO]** Front-end desplegado en GitHub Pages.
 - [ ] 🔴 **[OBLIGATORIO]** Uso estricto de funciones asíncronas con `try/catch`.
 - [ ] 🔴 **[OBLIGATORIO]** Documentación completa en `README.md`.
