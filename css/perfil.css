@@ -145,7 +145,7 @@
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 28px 24px;
 }
 
@@ -160,7 +160,7 @@
 .perfil__pedidos-imagen {
   width: 100%;
   height: auto;
-  aspect-ratio: 2 / 3;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 10px;
   display: block;
@@ -300,24 +300,6 @@
 }
 
 @media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    gap: 16px;
-    padding: 16px;
-  }
-
-  .nav {
-    position: static;
-    transform: none;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-  }
-
-  .nav-logo img {
-    max-width: 220px;
-  }
-
   .perfil {
     grid-template-columns: 1fr;
     gap: 24px;
