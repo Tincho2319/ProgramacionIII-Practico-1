@@ -32,6 +32,7 @@
   </head>
 
   <body class="fondo-login">
+    <div class="lluvia"></div>
     <header>
       <nav class="navbar">
         <div class="nav-left">
@@ -56,32 +57,30 @@
     </header>
 
     <main class="login-main">
-      <div class="gif-login">
-        <video autoplay loop muted playsinline>
-          <source src="../assets/img/gifLogin.mp4" type="video/mp4" />
-        </video>
-      </div>
-
       <div class="login-card">
         <form action="perfil.html" class="login-form">
           <h1>Acceso Clientes</h1>
 
-          <div class="campo-login">
+          <div class="input-group">
             <label for="email">Email</label>
             <input id="email" type="email" required />
           </div>
 
-          <div class="campo-login">
+          <div class="input-group">
             <label for="password">Contraseña</label>
             <input id="password" type="password" required />
           </div>
 
-          <button type="submit" class="login-boton">Ingresar</button>
-
-          <p class="login-texto">
-            ¿No eres miembro?
-            <a class="registrate-link" href="registro.html">Regístrate</a>
-          </p>
+          <div class="btn-dropdown-wrapper">
+            <button type="submit" class="btn-principal">Ingresar</button>
+            
+            <div class="dropdown-content">
+                <p>¿No eres miembro?</p>
+                <a href="registro.html">Regístrate</a>
+                <hr class="linea-terminos">
+                <a href="#">Términos y condiciones</a>
+            </div>
+          </div>
         </form>
       </div>
     </main>
