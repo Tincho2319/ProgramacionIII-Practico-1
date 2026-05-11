@@ -124,23 +124,23 @@
 }
 
 /* ==========================================
-   SECCIÓN DERECHA: PELÍCULAS
+   SECCIÓN DERECHA: PEDIDOS
    ========================================== */
-.perfil__peliculas {
+.perfil__pedidos {
   display: flex;
   flex-direction: column;
   padding-left: 8px;
   min-width: 0;
 }
 
-.perfil__peliculas-titulo {
+.perfil__pedidos-titulo {
   font-size: 2.2rem;
   font-weight: 600;
   color: var(--color-secundario);
   margin: 0 0 20px 0;
 }
 
-.perfil__peliculas-lista {
+.perfil__pedidos-lista {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -149,7 +149,7 @@
   gap: 28px 24px;
 }
 
-.perfil__peliculas-item {
+.perfil__pedidos-item {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -157,7 +157,7 @@
   min-width: 0;
 }
 
-.perfil__peliculas-imagen {
+.perfil__pedidos-imagen {
   width: 100%;
   height: auto;
   aspect-ratio: 2 / 3;
@@ -167,25 +167,25 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.perfil__peliculas-item:hover .perfil__peliculas-imagen {
+.perfil__pedidos-item:hover .perfil__pedidos-imagen {
   transform: translateY(-4px);
   box-shadow: 0 4px 20px var(--color-secundario);
 }
 
-.perfil__peliculas-info {
+.perfil__pedidos-info {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-.perfil__peliculas-titulo-row {
+.perfil__pedidos-titulo-row {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 8px;
 }
 
-.perfil__peliculas-nombre {
+.perfil__pedidos-nombre {
   margin: 0;
   font-size: 0.98rem;
   font-weight: 400;
@@ -197,7 +197,7 @@
   overflow: hidden;
 }
 
-.perfil__peliculas-rating {
+.perfil__pedidos-rating {
   font-size: 0.98rem;
   font-weight: 700;
   color: var(--color-secundario);
@@ -205,7 +205,7 @@
   flex-shrink: 0;
 }
 
-.perfil__peliculas-fecha {
+.perfil__pedidos-fecha {
   margin: 0;
   font-size: 0.9rem;
   color: var(--color-texto-suave);
@@ -215,7 +215,7 @@
   flex-wrap: wrap;
 }
 
-.perfil__peliculas-fecha i {
+.perfil__pedidos-fecha i {
   color: var(--color-secundario);
   font-size: 1rem;
 }
@@ -271,7 +271,7 @@
     padding-right: 24px;
   }
 
-  .perfil__peliculas-lista {
+  .perfil__pedidos-lista {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
@@ -294,7 +294,7 @@
     padding-right: 20px;
   }
 
-  .perfil__peliculas-lista {
+  .perfil__pedidos-lista {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
@@ -331,16 +331,16 @@
     padding-bottom: 24px;
   }
 
-  .perfil__peliculas {
+  .perfil__pedidos {
     padding-left: 0;
   }
 
-  .perfil__peliculas-titulo {
+  .perfil__pedidos-titulo {
     font-size: 1.8rem;
     text-align: center;
   }
 
-  .perfil__peliculas-lista {
+  .perfil__pedidos-lista {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px 16px;
   }
@@ -374,15 +374,15 @@
     height: 120px;
   }
 
-  .perfil__peliculas-titulo {
+  .perfil__pedidos-titulo {
     font-size: 1.6rem;
   }
 
-  .perfil__peliculas-lista {
+  .perfil__pedidos-lista {
     grid-template-columns: 1fr;
   }
 
-  .perfil__peliculas-titulo-row {
+  .perfil__pedidos-titulo-row {
     gap: 10px;
   }
 }
