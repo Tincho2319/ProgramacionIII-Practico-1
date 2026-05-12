@@ -7,12 +7,9 @@ const API_URL = "https://impulsar-webapi-64jf.onrender.com/servicios";
  * Función principal para obtener y mostrar los servicios en el HTML
  */
 async function cargarServicios() {
-    // Buscamos el contenedor con la clase 'Razones' que definiste en tu HTML
-    const contenedor = document.querySelector('.Razones');
-    
-    // Si no estamos en la página de servicios (donde no existe el contenedor), salimos de la función
-    if (!contenedor) return;
 
+    const grid = document.getElementById('form-grid');
+    
     try {
         // Realizamos la petición al servidor de Render
         const respuesta = await fetch(API_URL);
@@ -22,35 +19,49 @@ async function cargarServicios() {
         }
 
         const servicios = await respuesta.json();
-        
-        // Limpiamos el contenido previo (como el mensaje de "Cargando...")
-        contenedor.innerHTML = "";
-
-        // Si no hay servicios cargados en el Back-end
-        if (servicios.length === 0) {
-            contenedor.innerHTML = "<p>Actualmente no hay servicios disponibles.</p>";
-            return;
-        }
 
         // Recorremos la lista de servicios y creamos las tarjetas dinámicamente
+
         servicios.forEach(servicio => {
-            // Usamos las clases de CSS que ya tienes: 'Razon', 'texto_Titulo_Razones' y 'texto_Razon'
-            contenedor.innerHTML += `
-                <div class="Razon">
-                    <h4 class="texto_Titulo_Razones">${servicio.nombre}</h4>
-                    <p class="texto_Razon">${servicio.descripcion}</p>
-                    <div class="Botones" style="margin-top: 15px;">
-                        <a class="Boton_Contacto_Servicio" href="pedido.html?id=${servicio.id || ''}">
-                            Solicitar Servicio
-                        </a>
-                    </div>
-                </div>
-            `;
+            const nuevoCampo = document.createElement('section');
+            nuevoCampo.classList.add('campo');
+            
+            const img = document.createElement('img');
+            img.src = "../assets/img/servicios_img/img_desarrollo_web.jpg";
+            img.alt = "img_desarrollo_web";
+
+            const nombre = document.createElement('h2');
+            nombre.textContent = `${servicio.nombre}`;
+
+            const desc = document.createElement('p');
+            desc.textContent = `${servicio.desc}`;
+
+            const footSolicitar = document.createElement('div');
+            footSolicitar.classList.add('foot-solicitar');
+
+            const precio = document.createElement('p');
+            precio.classList.add('precio');
+            precio.textContent = `${servicio.precio}`;
+
+            const pedir = document.createElement('a');
+            pedir.classList.add('solicitar');
+            pedir.href = `pedido.html?id=${servicio.id}`;
+            pedir.textContent = "Solicitar --->";
+
+            footSolicitar.appendChild(precio);
+            footSolicitar.appendChild(pedir);
+
+            nuevoCampo.appendChild(img);
+            nuevoCampo.appendChild(nombre);
+            nuevoCampo.appendChild(desc);
+            nuevoCampo.appendChild(footSolicitar);
+
+            grid.appendChild(nuevoCampo);
         });
 
     } catch (error) {
         console.error("Error al cargar los servicios de ImpulsAR:", error);
-        contenedor.innerHTML = `
+        grid.innerHTML = `
             <p class="error">Hubo un problema al cargar los servicios. Por favor, intenta de nuevo más tarde.</p>
         `;
     }
