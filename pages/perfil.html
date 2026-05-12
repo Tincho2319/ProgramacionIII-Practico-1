@@ -19,24 +19,27 @@
 
   <body class="contenedor">
     <header class="header">
-      <div class="nav-logo">
-        <img src="../assets/img/logocompleto-test.png" alt="Logo Aurora">
-      </div>
-
-      <nav class="nav">
-        <a href="../index.html">Cartelera</a>
-        <a href="estrenos.html">Próximos estrenos</a>
-        <a href="perfil.html" class="active">
-          <i class="fa-solid fa-user"></i> Mi Perfil
-        </a>
+      <nav class="navbar">
+        <div class="nav-left">
+          <a href="../index.html"
+            ><img
+              class="logo"
+              src="../assets/img/logocompleto-test.png"
+              alt="Logo de ImpulsAR"
+          /></a>
+        </div>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="equipo.html">Equipo</a></li>
+          <li><a href="pedido.html">Pedido</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="perfil.html" class="active"><i class="fa-solid fa-user"></i> Mi Perfil</a></li>
+          <li><a href="login.html" class="nav-exit"><span class="exit-icon"><i class="fa-solid fa-arrow-right-to-bracket"></i></span><span class="exit-text">Cerrar sesión</span></a></li>
+        </ul>
+        <div class="nav-right"></div>
       </nav>
-
-      <a href="login.html" class="nav-exit">
-        <span class="exit-icon">
-          <i class="fa-solid fa-arrow-right-to-bracket"></i>
-        </span>
-        <span class="exit-text">Cerrar sesión</span>
-      </a>
     </header>
 
     <main class="perfil">
@@ -53,196 +56,26 @@
         </div>
 
         <div class="perfil__info-header">
-          <h2 class="perfil__info-nombre">Elena García</h2>
-          <p class="perfil__info-miembro">Miembro desde: Enero 2023</p>
+          <h2 class="perfil__info-nombre" id="nombre-usuario">Cargando...</h2>
+          <p class="perfil__info-miembro" id="fecha-registro"></p>
         </div>
 
         <hr class="perfil__info-divider">
 
         <nav class="perfil__menu">
-          <a href="#">Mis Entradas</a>
-          <a href="#">Métodos de Pago</a>
-          <a href="#">Configuración</a>
-          <a href="login.html" class="perfil__menu--danger">Cerrar Sesión</a>
+          <a href="#" id="email-usuario">Cargando email...</a>
         </nav>
       </section>
 
-      <section class="perfil__peliculas">
-        <h3 class="perfil__peliculas-titulo">Películas ya vistas</h3>
+      <section class="perfil__pedidos">
+        <h3 class="perfil__pedidos-titulo">Últimos Pedidos</h3>
 
-        <ul class="perfil__peliculas-lista">
-          <li class="perfil__peliculas-item">
-            <img
-              src="../assets/img/historial-peliculas/poster-pelicula-0"
-              alt="Zootopia 2"
-              class="perfil__peliculas-imagen"
-            />
-            <div class="perfil__peliculas-info">
-              <div class="perfil__peliculas-titulo-row">
-                <h4 class="perfil__peliculas-nombre">Zootopia 2</h4>
-                <span class="perfil__peliculas-rating">7.5</span>
-              </div>
-              <p class="perfil__peliculas-fecha">
-                <i class="fa-solid fa-circle-check"></i> Visto el 25/10/2023
-              </p>
-            </div>
-          </li>
-
-          <li class="perfil__peliculas-item">
-            <img
-              src="../assets/img/historial-peliculas/poster-pelicula-1"
-              alt="Kill Bill"
-              class="perfil__peliculas-imagen"
-            />
-            <div class="perfil__peliculas-info">
-              <div class="perfil__peliculas-titulo-row">
-                <h4 class="perfil__peliculas-nombre">Kill Bill</h4>
-                <span class="perfil__peliculas-rating">8</span>
-              </div>
-              <p class="perfil__peliculas-fecha">
-                <i class="fa-solid fa-circle-check"></i> Visto el 25/10/2023
-              </p>
-            </div>
-          </li>
-
-          <li class="perfil__peliculas-item">
-            <img
-              src="../assets/img/historial-peliculas/poster-pelicula-2"
-              alt="El Padrino"
-              class="perfil__peliculas-imagen"
-            />
-            <div class="perfil__peliculas-info">
-              <div class="perfil__peliculas-titulo-row">
-                <h4 class="perfil__peliculas-nombre">El Padrino</h4>
-                <span class="perfil__peliculas-rating">8.2</span>
-              </div>
-              <p class="perfil__peliculas-fecha">
-                <i class="fa-solid fa-circle-check"></i> Visto el 15/10/2023
-              </p>
-            </div>
-          </li>
-
-          <li class="perfil__peliculas-item">
-            <img
-              src="../assets/img/historial-peliculas/poster-pelicula-3"
-              alt="Instinto Implacable"
-              class="perfil__peliculas-imagen"
-            />
-            <div class="perfil__peliculas-info">
-              <div class="perfil__peliculas-titulo-row">
-                <h4 class="perfil__peliculas-nombre">Instinto Implacable</h4>
-                <span class="perfil__peliculas-rating">6.2</span>
-              </div>
-              <p class="perfil__peliculas-fecha">
-                <i class="fa-solid fa-circle-check"></i> Visto el 5/10/2023
-              </p>
-            </div>
-          </li>
-
-          <li class="perfil__peliculas-item">
-            <img
-              src="../assets/img/historial-peliculas/poster-pelicula-4"
-              alt="Peaky Blinders: El hombre inmortal"
-              class="perfil__peliculas-imagen"
-            />
-            <div class="perfil__peliculas-info">
-              <div class="perfil__peliculas-titulo-row">
-                <h4 class="perfil__peliculas-nombre">Peaky Blinders: El hombre inmortal</h4>
-                <span class="perfil__peliculas-rating">4.5</span>
-              </div>
-              <p class="perfil__peliculas-fecha">
-                <i class="fa-solid fa-circle-check"></i> Visto el 2/10/2023
-              </p>
-            </div>
-          </li>
-
-          <li class="perfil__peliculas-item">
-            <img
-              src="../assets/img/historial-peliculas/poster-pelicula-5"
-              alt="Avatar: Fuego y Ceniza"
-              class="perfil__peliculas-imagen"
-            />
-            <div class="perfil__peliculas-info">
-              <div class="perfil__peliculas-titulo-row">
-                <h4 class="perfil__peliculas-nombre">Avatar: Fuego y Ceniza</h4>
-                <span class="perfil__peliculas-rating">9.1</span>
-              </div>
-              <p class="perfil__peliculas-fecha">
-                <i class="fa-solid fa-circle-check"></i> Visto el 1/10/2023
-              </p>
-            </div>
-          </li>
-
-          <li class="perfil__peliculas-item">
-            <img
-              src="../assets/img/historial-peliculas/poster-pelicula-6"
-              alt="Spiderman: Sin camino a casa"
-              class="perfil__peliculas-imagen"
-            />
-            <div class="perfil__peliculas-info">
-              <div class="perfil__peliculas-titulo-row">
-                <h4 class="perfil__peliculas-nombre">Spiderman: Sin camino a casa</h4>
-                <span class="perfil__peliculas-rating">9.3</span>
-              </div>
-              <p class="perfil__peliculas-fecha">
-                <i class="fa-solid fa-circle-check"></i> Visto el 25/9/2023
-              </p>
-            </div>
-          </li>
-
-          <li class="perfil__peliculas-item">
-            <img
-              src="../assets/img/historial-peliculas/poster-pelicula-7"
-              alt="El Mago del Kremlin"
-              class="perfil__peliculas-imagen"
-            />
-            <div class="perfil__peliculas-info">
-              <div class="perfil__peliculas-titulo-row">
-                <h4 class="perfil__peliculas-nombre">El Mago del Kremlin</h4>
-                <span class="perfil__peliculas-rating">6.3</span>
-              </div>
-              <p class="perfil__peliculas-fecha">
-                <i class="fa-solid fa-circle-check"></i> Visto el 15/9/2023
-              </p>
-            </div>
-          </li>
-
-          <li class="perfil__peliculas-item">
-            <img
-              src="../assets/img/historial-peliculas/poster-pelicula-8"
-              alt="Super Mario Bros Galaxy"
-              class="perfil__peliculas-imagen"
-            />
-            <div class="perfil__peliculas-info">
-              <div class="perfil__peliculas-titulo-row">
-                <h4 class="perfil__peliculas-nombre">Super Mario Bros Galaxy</h4>
-                <span class="perfil__peliculas-rating">7.6</span>
-              </div>
-              <p class="perfil__peliculas-fecha">
-                <i class="fa-solid fa-circle-check"></i> Visto el 13/9/2023
-              </p>
-            </div>
-          </li>
-
-          <li class="perfil__peliculas-item">
-            <img
-              src="../assets/img/historial-peliculas/poster-pelicula-9"
-              alt="Turbulencias"
-              class="perfil__peliculas-imagen"
-            />
-            <div class="perfil__peliculas-info">
-              <div class="perfil__peliculas-titulo-row">
-                <h4 class="perfil__peliculas-nombre">Turbulencias</h4>
-                <span class="perfil__peliculas-rating">6.5</span>
-              </div>
-              <p class="perfil__peliculas-fecha">
-                <i class="fa-solid fa-circle-check"></i> Visto el 11/8/2023
-              </p>
-            </div>
-          </li>
+        <ul class="perfil__pedidos-lista" id="lista-pedidos">
+           <li>Cargando tus últimos pedidos...</li>
         </ul>
       </section>
     </main>
+    <script src="../js/perfil.js"></script>
 
     <footer>
       <div>
