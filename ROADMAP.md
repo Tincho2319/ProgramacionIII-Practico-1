@@ -24,7 +24,7 @@ Este documento detalla la planificación y distribución de tareas para el desar
 - [x] 🔴 **[OBLIGATORIO]** Instalar dependencias.
 - [x] 🔴 **[OBLIGATORIO]** Realizar deploy inicial de la API en Render.
 - [ ] 🔴 **[OBLIGATORIO]** Desarrollar endpoint `GET /perfil/:id`.
-- [ ] 🔴 **[OBLIGATORIO]** Crear el archivo JSON base simulando los datos del usuario logueado.
+- [x] 🔴 **[OBLIGATORIO]** Crear el archivo JSON base simulando los datos del usuario logueado.
 
 ### 2. Fede (Documentación y Frontend de Perfil)
 **Estado:** En Proceso

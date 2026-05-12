@@ -1,13 +1,14 @@
-
+/*Creamos este archivo js para gestionar el header y footer de forma dinámica, sin alterar el html de forma directa*/
 document.addEventListener("DOMContentLoaded", () => {
     insertarHeader();
     insertarFooter();
 });
 
 function insertarHeader() {
+    /*Buscamos el header*/
     const headerElement = document.querySelector("header");
     if (!headerElement) return;
-
+    /*Insertamos el código HTML del header, con las rutas relativas correctas para cada página*/
     headerElement.innerHTML = `
         <nav class="navbar">
             <div class="nav-left">
@@ -21,6 +22,7 @@ function insertarHeader() {
                 <li><a href="../pages/faq.html">FAQ</a></li>
                 <li><a href="../pages/contacto.html">Contacto</a></li>
                 <li><a href="../pages/login.html">Login</a></li>
+                <li><a href="../pages/registro.html">Registro</a></li>
             </ul>
             <div class="nav-right"></div>
         </nav>
@@ -28,9 +30,10 @@ function insertarHeader() {
 }
 
 function insertarFooter() {
+    /*Buscamos el footer*/
     const footerElement = document.querySelector("footer");
     if (!footerElement) return;
-
+    /*Insertamos el código HTML del footer, con las rutas relativas correctas para cada página*/
     footerElement.innerHTML = `
          <div>
             <img src="../assets/img/logocompleto-test.png" alt="Logo de ImpulsAR" class="logo">
