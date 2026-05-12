@@ -35,21 +35,34 @@ Impulsar es un proyecto académico que consiste en un sitio web profesional para
 ## 📁 Estructura del Proyecto
 
 ```
-ProgramacionIII-Practico-1/
+ProgramacionIII-Practico-3-Fork-1/
 ├── index.html
 ├── README.md
+├── ROADMAP.md
+├── .gitignore
 ├── assets/
 │   ├── favicon/
 │   └── img/
 ├── css/
+│   ├── components/
+│   │   ├── footer.css
+│   │   ├── grids.css
+│   │   ├── nav.css
+│   │   ├── card-horizontal.css
+│   │   ├── card-vertical.css
+│   │   └── button.css
 │   ├── styles.css
 │   ├── index.css
+│   ├── login.css
+│   ├── perfil.css
 │   ├── pedido.css
 │   ├── servicios.css
 │   ├── equipo.css
 │   ├── faq.css
 │   └── contacto.css
 └── pages/
+    ├── login.html
+    ├── perfil.html
     ├── servicios.html
     ├── equipo.html
     ├── faq.html

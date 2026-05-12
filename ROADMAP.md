@@ -32,13 +32,14 @@ Este documento detalla la planificación y distribución de tareas para el desar
 - [x] 🔴 **[OBLIGATORIO]** Planificación de la División de Tareas y redacción del `ROADMAP.md`.
 - [ ] 🔴 **[OBLIGATORIO]** Documentación técnica detallada del 90% de las funciones.
 - [ ] 🔴 **[OBLIGATORIO]** Incluir ejemplos de estructura de cada archivo JSON en la documentación.
-- [ ] 🔴 **[OBLIGATORIO]** Desarrollo visual del apartado de perfil de usuario en el Front-end.
-- [ ] 🔴 **[OBLIGATORIO]** Conectar la vista del perfil con el endpoint desarrollado por Martin.
+- [x] 🔴 **[OBLIGATORIO]** Desarrollo visual del apartado de perfil de usuario en el Front-end.
+- [x] 🔴 **[OBLIGATORIO]** Conectar la vista del perfil con el endpoint desarrollado por Martin.
 
 ### 3. Matias (Listado de Servicios - Full Stack)
 **Estado:** Pendiente
 - [ ] 🔴 **[OBLIGATORIO]** Crear el archivo `data.json` garantizando más de 13 servicios.
 - [ ] 🔴 **[OBLIGATORIO]** Desarrollar endpoint `GET /servicios`.
+- [x] 🔴 **[OBLIGATORIO]** Realizar la configuración y deploy del Front-end en GitHub Pages.
 - [ ] 🔴 **[OBLIGATORIO]** Refactorizar el Front-end para consumir el listado desde la API en Render con `fetch` y `try/catch`.
 
 ### 4. Nahuel (Detalle de Servicios y Buscador - Full Stack)
@@ -51,11 +52,10 @@ Este documento detalla la planificación y distribución de tareas para el desar
 **Estado:** Pendiente
 - [ ] 🔴 **[OBLIGATORIO]** Crear JSON de los miembros del equipo y desarrollar el endpoint `GET /equipo`.
 - [ ] 🔴 **[OBLIGATORIO]** Dinamizar la vista del equipo en el Front-end consumiendo la API.
-- [ ] 🔴 **[OBLIGATORIO]** Realizar la configuración y deploy del Front-end en GitHub Pages.
 
 ### 6. Nicolás (Login y Experiencia de Usuario)
 **Estado:** Pendiente
-- [ ] 🔴 **[OBLIGATORIO]** Creación y maquetación de la nueva página de Login.
+- [x] 🔴 **[OBLIGATORIO]** Creación y maquetación de la nueva página de Login.
 - [ ] 🟢 **[OPCIONAL]** Desarrollar endpoint `POST /login` validando credenciales contra un JSON.
 - [ ] 🟢 **[OPCIONAL]** Implementar efectos de carga ("Spinners" o "Cargando...") en el Front-end.
 - [ ] 🟢 **[OPCIONAL]** Establecer y unificar las `flags` (`console.log`) en las rutas.
@@ -65,5 +65,5 @@ Este documento detalla la planificación y distribución de tareas para el desar
 ## ⚙️ Requisitos Técnicos Clave (Bloqueantes)
 - [x] 🔴 **[OBLIGATORIO]** API desplegada en Render.
 - [x] 🔴 **[OBLIGATORIO]** Front-end desplegado en GitHub Pages.
-- [ ] 🔴 **[OBLIGATORIO]** Uso estricto de funciones asíncronas con `try/catch`.
+- [x] 🔴 **[OBLIGATORIO]** Uso estricto de funciones asíncronas con `try/catch`.
 - [ ] 🔴 **[OBLIGATORIO]** Documentación completa en `README.md`.
