@@ -21,14 +21,9 @@ async function cargarServicios() {
         const servicios = await respuesta.json();
 
         // Recorremos la lista de servicios y creamos las tarjetas dinámicamente
-
         servicios.forEach(servicio => {
             const nuevoCampo = document.createElement('section');
             nuevoCampo.classList.add('campo');
-            
-            /*const img = document.createElement('img');
-            img.src = "../assets/img/servicios_img/img_desarrollo_web.jpg";
-            img.alt = "img_desarrollo_web";*/
 
             const ncTop = document.createElement('div');
             ncTop.classList.add('campo-top');
