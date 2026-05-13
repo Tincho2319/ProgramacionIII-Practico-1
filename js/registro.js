@@ -1,4 +1,4 @@
-const API_URL = "https://impulsar-webapi-64jf.onrender.com/auth/registro";
+const API_URL = "https://impulsar-webapi-64jf.onrender.com/auth/register";
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -16,10 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             try{
+                const pass1 = document.getElementById('password').value;
+                const pass2 = document.getElementById('confirm-password').value;
+
+                if (pass1 !== pass2) {
+                    alert("Las contraseñas no coinciden.");
+                    return; // Frenamos el envío
+}
                 const respuesta = await fetch(API_URL,{
                     method : 'POST',
-                    headers : {'Content-type': 'aplicattion/json'},
-                    body = JSON.stringify(datos)
+                    headers : {'Content-type': 'application/json'},
+                    body : JSON.stringify(datos)
                 });
                 const resultado = await respuesta.json();
 
