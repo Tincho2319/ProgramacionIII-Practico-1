@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (formLogin) {
         formLogin.addEventListener('submit', async (e) => {
-            e.preventDefault(); // Evita el error 405 y la recarga de página
+            e.preventDefault();
 
             const datos = {
                 email: document.getElementById('txt-email').value,
@@ -22,16 +22,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 const resultado = await respuesta.json();
 
                 if (respuesta.ok && resultado.msg === "Correcto") {
-                    // Si los datos en usuarios.json coinciden
+                    // GUARDAR DATOS EN LOCALSTORAGE
+                    // Guardamos el ID que viene del servidor para usarlo en /perfil/:id
+                    localStorage.setItem('usuarioId', resultado.id);
+                    localStorage.setItem('usuarioNombre', resultado.usuario);
+
                     alert(`¡Bienvenido ${resultado.usuario || ''}!`);
-                    window.location.href = "index.html"; 
+                    
+                    // Redirigimos a la página de perfil
+                    window.location.href = "perfil.html"; 
                 } else {
-                    alert("Email o contraseña incorrectos.");
+                    alert(resultado.msg || "Email o contraseña incorrectos.");
                 }
 
             } catch (error) {
                 console.error("Error de conexión con Render:", error);
-                alert("No se pudo conectar con el servidor. Verifique su conexión.");
+                alert("No se pudo conectar con el servidor.");
             }
         });
     }
