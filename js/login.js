@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 email: document.getElementById('txt-email').value,
                 password: document.getElementById('txt-password').value
             };
-
+                
             try {
                 const respuesta = await fetch(API_URL, {
                     method: 'POST', 

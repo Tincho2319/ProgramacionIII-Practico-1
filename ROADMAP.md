@@ -24,8 +24,10 @@ Este documento detalla la planificación y distribución de tareas para el desar
 - [x] 🔴 **[OBLIGATORIO]** Instalar dependencias.
 - [x] 🔴 **[OBLIGATORIO]** Realizar deploy inicial de la API en Render.
 - [ ] 🔴 **[OBLIGATORIO]** Desarrollar endpoint `GET /perfil/:id`.
-- [x] 🔴 **[OBLIGATORIO]** Crear el archivo JSON base simulando los datos del usuario logueado.
-
+- [ ] 🔴 **[OBLIGATORIO]** Crear el archivo JSON base simulando los datos del usuario logueado.
+- [x] 🔴 **[OBLIGATORIO]** Refactorizar el Front-end de login, contacto, registro, pedido, faq,servicios y equipo para consumir el listado desde la API en Render con `fetch` y `try/catch`.
+- [x] 🔴 **[OBLIGATORIO]** *(Asumido por Martin)* Desarrollar lógica de `controllers/autorizacionController.js` y `routes/autorizacionRoutes.js` (Backend de Login).
+      
 ### 2. Fede (Documentación y Frontend de Perfil)
 **Estado:** En Proceso
 - [ ] 🔴 **[OBLIGATORIO]** Redacción del `README.md`.
@@ -34,12 +36,13 @@ Este documento detalla la planificación y distribución de tareas para el desar
 - [ ] 🔴 **[OBLIGATORIO]** Incluir ejemplos de estructura de cada archivo JSON en la documentación.
 - [x] 🔴 **[OBLIGATORIO]** Desarrollo visual del apartado de perfil de usuario en el Front-end.
 - [x] 🔴 **[OBLIGATORIO]** Conectar la vista del perfil con el endpoint desarrollado por Martin.
+- [x] 🔴 **[OBLIGATORIO]** Creación y maquetación de la nueva página de Login.
 
 ### 3. Matias (Listado de Servicios - Full Stack)
 **Estado:** Pendiente
+- [x] 🔴 **[OBLIGATORIO]** Realizar la configuración y deploy del Front-end en GitHub Pages.
 - [ ] 🔴 **[OBLIGATORIO]** Crear el archivo `data.json` garantizando más de 13 servicios.
 - [ ] 🔴 **[OBLIGATORIO]** Desarrollar endpoint `GET /servicios`.
-- [x] 🔴 **[OBLIGATORIO]** Realizar la configuración y deploy del Front-end en GitHub Pages.
 - [ ] 🔴 **[OBLIGATORIO]** Refactorizar el Front-end para consumir el listado desde la API en Render con `fetch` y `try/catch`.
 
 ### 4. Nahuel (Detalle de Servicios y Buscador - Full Stack)
@@ -55,7 +58,6 @@ Este documento detalla la planificación y distribución de tareas para el desar
 
 ### 6. Nicolás (Login y Experiencia de Usuario)
 **Estado:** Pendiente
-- [x] 🔴 **[OBLIGATORIO]** Creación y maquetación de la nueva página de Login.
 - [ ] 🟢 **[OPCIONAL]** Desarrollar endpoint `POST /login` validando credenciales contra un JSON.
 - [ ] 🟢 **[OPCIONAL]** Implementar efectos de carga ("Spinners" o "Cargando...") en el Front-end.
 - [ ] 🟢 **[OPCIONAL]** Establecer y unificar las `flags` (`console.log`) en las rutas.

@@ -1,193 +1,112 @@
-/* Nav General */
-nav {
+.introduccion-equipo {
+  font-family: "Google Sans Flex", sans-serif;
+  color: white;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 30px 30px;
-
-  background: transparent;
-  backdrop-filter: blur(10px);
-
-  /* Linea Divisora (Opcional) */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
-
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  margin: 5% 10%;
+  font-size: 2em;
+  line-height: 1.4;
 }
 
-/* Nav Hover */
-nav a:hover {
-    color: white;
-  }
-  
-  /* Línea animada */
-  nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-  
-    width: 0%;
-    height: 3px;
-  
-    background: linear-gradient(90deg, #4F46E5, #B5529F);
-    border-radius: 3px;
-  
-    transition: width 0.3s ease;
-  }
-  
-  nav a:hover::after {
-    width: 100%;
-  }
-  /* Fin Nav General */
-
-
-/* Nav Left */
-.nav-left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-/* Fin Nav Left */
-
-/* Nav Center */
-nav ul {
-  display: flex;
-  gap: 40px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-
-/* Links */
-nav a {
-  position: relative;
-  text-decoration: none;
-  color: #b6bcc6;
+.resaltado {
+  color: #9a76ee;
   font-weight: bold;
-  transition: color 0.3s ease;
 }
-/* Fin Nav Center */
-.--Introducción--{
-    font-family: "Google Sans Flex", sans-serif;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    margin: 5% 10%;
-    font-size: 2em;
+
+.contenedor-equipo {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin: 5% 12%;
 }
-.resaltado{
-    color:#9a76ee;
-    font-weight: bold;
+
+.card-equipo {
+  font-family: "Google Sans Flex", sans-serif;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 30px;
+  border-radius: 30px;
+  transition: all 0.8s ease;
+  overflow: hidden;
 }
-/* FlexBox CEO */
-.CEO {
-    font-family: "Google Sans Flex", sans-serif;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    margin: 10% 15%;
-    padding: 30px;
-    border-radius: 30px;
-    transition: all 0.8s ease;
-    overflow: hidden;
+
+.card-equipo:nth-child(even) {
+  flex-direction: row-reverse;
 }
-.CEOResaltado{
-    color:#9a76ee;
+
+.card-equipo:hover {
+  box-shadow: 0px 0px 10px 10px rgb(64, 31, 84);
 }
-.CEOTexto{
-    margin-left: 10%;
-    font-size: 2em;
+
+.imagen-equipo {
+  width: 30%;
+  max-width: 280px;
+  min-width: 180px;
+  height: auto;
+  border-radius: 30px;
+  object-fit: cover;
 }
-.CEO:hover{
-    box-shadow: 0px 0px 10px 10px rgb(64, 31, 84);
+
+.texto-equipo {
+  font-size: 1.5em;
 }
-.CEO img{
-    width: 30%;
-    height: auto;
-    border-radius: 30px;
+
+.texto-equipo h3 {
+  color: #9a76ee;
+  margin-bottom: 0.5rem;
 }
-/* FlexBox Mobile */
-.Mobile{
-    font-family: "Google Sans Flex", sans-serif;
-    color: white;
-    display: flex;
-    flex-direction: row-reverse;
-    margin: 10% 15%;
-    padding: 30px;
-    border-radius: 30px;
-    transition: all 0.8s ease;
-    overflow: hidden;
+
+.texto-equipo h4 {
+  color: #ffffff;
+  margin-bottom: 1rem;
 }
-.MobileResaltado{
-    color:#9a76ee;
+
+.texto-equipo p {
+  color: #d6d6d6;
+  line-height: 1.5;
 }
-.MobileTexto{
-    margin-right: 10%;
-    font-size: 2em;
+
+.link-github {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #9a76ee;
+  text-decoration: none;
+  font-weight: bold;
 }
-.Mobile:hover{
-    box-shadow: 0px 0px 10px 10px rgb(64, 31, 84);
+
+.link-github:hover {
+  color: white;
 }
-.Mobile img{
-    width: 30%;
-    height: auto;
-    border-radius: 30px;
+
+.error {
+  color: #ff6b6b;
+  text-align: center;
+  font-size: 1.2rem;
 }
-/* FlexBox Web */
-.Web{
-    font-family: "Google Sans Flex", sans-serif;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    margin: 10% 15%;
-    padding: 30px;
-    border-radius: 30px;
-    transition: all 0.8s ease;
-    overflow: hidden;
-}
-.Web:hover{
-    box-shadow: 0px 0px 10px 10px rgb(64, 31, 84);
-}
-.WebResaltado{
-    color:#9a76ee;
-}
-.WebTexto{
-    margin-left: 10%;
-    font-size: 2em;
-}
-.Web img{
-    width: 30%;
-    height: auto;
-    border-radius: 30px;
-}
-/* FlexBox Web */
-.Cloud{
-    font-family: "Google Sans Flex", sans-serif;
-    color: white;
-    display: flex;
-    flex-direction: row-reverse;
-    margin: 10% 15%;
-    padding: 30px;
-    border-radius: 30px;
-    transition: all 0.8s ease;
-    overflow: hidden;
-}
-.CloudResaltado{
-    color:#9a76ee;
-}
-.CloudTexto{
-    margin-right: 10%;
-    font-size: 2em;
-}
-.Cloud:hover{
-    box-shadow: 0px 0px 10px 10px rgb(64, 31, 84);
-}
-.Cloud img{
-    width: 30%;
-    height: auto;
-    border-radius: 30px;
+
+@media (max-width: 768px) {
+  .introduccion-equipo {
+    font-size: 1.3em;
+    margin: 10% 6%;
+  }
+
+  .contenedor-equipo {
+    margin: 8% 6%;
+  }
+
+  .card-equipo,
+  .card-equipo:nth-child(even) {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .imagen-equipo {
+    width: 70%;
+  }
+
+  .texto-equipo {
+    font-size: 1.1em;
+  }
 }
