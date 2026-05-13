@@ -26,9 +26,15 @@ async function cargarServicios() {
             const nuevoCampo = document.createElement('section');
             nuevoCampo.classList.add('campo');
             
-            const img = document.createElement('img');
+            /*const img = document.createElement('img');
             img.src = "../assets/img/servicios_img/img_desarrollo_web.jpg";
-            img.alt = "img_desarrollo_web";
+            img.alt = "img_desarrollo_web";*/
+
+            const ncTop = document.createElement('div');
+            ncTop.classList.add('campo-top');
+
+            const ncBot = document.createElement('div');
+            ncBot.classList.add('campo-bot');
 
             const nombre = document.createElement('h2');
             nombre.textContent = `${servicio.nombre}`;
@@ -41,7 +47,7 @@ async function cargarServicios() {
 
             const precio = document.createElement('p');
             precio.classList.add('precio');
-            precio.textContent = `${servicio.precio}`;
+            precio.textContent = `Desde $${servicio.precio}`;
 
             const pedir = document.createElement('a');
             pedir.classList.add('solicitar');
@@ -51,10 +57,13 @@ async function cargarServicios() {
             footSolicitar.appendChild(precio);
             footSolicitar.appendChild(pedir);
 
-            nuevoCampo.appendChild(img);
-            nuevoCampo.appendChild(nombre);
-            nuevoCampo.appendChild(desc);
-            nuevoCampo.appendChild(footSolicitar);
+            ncTop.appendChild(nombre);
+            ncTop.appendChild(desc);
+            ncBot.appendChild(document.createElement('hr'))
+            ncBot.appendChild(footSolicitar);
+
+            nuevoCampo.appendChild(ncTop);
+            nuevoCampo.appendChild(ncBot);
 
             grid.appendChild(nuevoCampo);
         });
