@@ -1,6 +1,7 @@
 const cargarPerfil = async () => {
     try{
         const respuesta = await fetch("https://impulsar-webapi-64jf.onrender.com/perfil/1");
+        
         const datos = await respuesta.json();
         console.log(datos);
         
@@ -41,4 +42,4 @@ const cargarPerfil = async () => {
     }
 };
 
-cargarPerfil();
+document.addEventListener('DOMContentLoaded', cargarPerfil);
