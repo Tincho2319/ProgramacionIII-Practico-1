@@ -30,7 +30,7 @@ Impulsar es un proyecto académico que consiste en un sitio web profesional para
 - **CSS3** - Estilos y diseño
 - **JavaScript** - Interactividad
 - **JSON** - Almacenamiento de datos
-- **ImpulsAPI** - API REST para el proyecto
+- [**ImpulsAPI**](https://github.com/Oviedo-Matias/ProgramacionIII-Practico-3) - API REST para el proyecto
     - **Render** - Hosting API
 - **GitHub** - Repositorio del proyecto
 - **GitHub Pages** - Hosting pagina web
@@ -79,6 +79,7 @@ ProgramacionIII-Practico-3-Fork-1/
 │   └── servicios.js
 └── pages/
     ├── login.html
+    ├── registro.html
     ├── perfil.html
     ├── servicios.html
     ├── equipo.html
