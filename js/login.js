@@ -26,6 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Guardamos el ID que viene del servidor para usarlo en /perfil/:id
                     localStorage.setItem('usuarioId', resultado.id);
                     localStorage.setItem('usuarioNombre', resultado.usuario);
+                    // Guardamos el email como identificador único
+                    localStorage.setItem('usuarioEmail', datos.email); 
 
                     alert(`¡Bienvenido ${resultado.usuario || ''}!`);
                     

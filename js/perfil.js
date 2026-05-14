@@ -1,6 +1,16 @@
 const cargarPerfil = async () => {
+    // 1. Capturamos el ID desde el localStorage
+    const emailLogueado = localStorage.getItem('usuarioEmail');
+
+    // 2. Validación de seguridad: Si no hay ID, lo mandamos al login
+    if (!emailLogueado) {
+        console.warn("No se encontró un email de usuario. Redirigiendo...");
+        window.location.href = "login.html";
+        return;
+    }
+    
     try{
-        const respuesta = await fetch("https://impulsar-webapi-64jf.onrender.com/perfil/:id=1");
+        const respuesta = await fetch(`https://impulsar-webapi-64jf.onrender.com/perfil/${emailLogueado}`);
         
         const datos = await respuesta.json();
         console.log(datos);
