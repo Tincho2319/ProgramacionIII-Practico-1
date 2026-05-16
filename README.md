@@ -28,28 +28,59 @@ Impulsar es un proyecto académico que consiste en un sitio web profesional para
 
 - **HTML5** - Estructura y semántica
 - **CSS3** - Estilos y diseño
-- **JavaScript** - Interactividad (próximamente)
+- **JavaScript** - Interactividad
+- **JSON** - Almacenamiento de datos
+- [**ImpulsAPI**](https://github.com/Oviedo-Matias/ProgramacionIII-Practico-3) - API REST para el proyecto
+    - **Render** - Hosting API
+- **GitHub** - Repositorio del proyecto
+- **GitHub Pages** - Hosting pagina web
+- **Git** - Control de versiones
+
 
 ---
 
 ## 📁 Estructura del Proyecto
 
 ```
-ProgramacionIII-Practico-1/
+ProgramacionIII-Practico-3-Fork-1/
 ├── index.html
 ├── README.md
+├── ROADMAP.md
+├── .gitignore
 ├── assets/
 │   ├── favicon/
 │   └── img/
 ├── css/
+│   ├── components/
+│   │   ├── footer.css
+│   │   ├── grids.css
+│   │   ├── nav.css
+│   │   ├── card-horizontal.css
+│   │   ├── card-vertical.css
+│   │   └── button.css
 │   ├── styles.css
 │   ├── index.css
+│   ├── login.css
+│   ├── perfil.css
 │   ├── pedido.css
 │   ├── servicios.css
 │   ├── equipo.css
 │   ├── faq.css
 │   └── contacto.css
+├── js/          
+│   ├── login.js
+│   ├── perfil.js
+│   ├── layout.js
+│   ├── equipo.js
+│   ├── contacto.js
+│   ├── main.js
+│   ├── registro.js
+│   ├── utils-js
+│   └── servicios.js
 └── pages/
+    ├── login.html
+    ├── registro.html
+    ├── perfil.html
     ├── servicios.html
     ├── equipo.html
     ├── faq.html

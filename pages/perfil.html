@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Impulsar - Mi perfil</title>
+    <meta name="description" content="Impulsar - Mi perfil" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/perfil.css" />
+  </head>
+
+  <body class="contenedor">
+    <header class="header">
+      <nav class="navbar">
+        <div class="nav-left">
+          <a href="../index.html"
+            ><img
+              class="logo"
+              src="../assets/img/logocompleto-test.png"
+              alt="Logo de ImpulsAR"
+          /></a>
+        </div>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="equipo.html">Equipo</a></li>
+          <li><a href="pedido.html">Pedido</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="perfil.html" class="active"><i class="fa-solid fa-user"></i> Mi Perfil</a></li>
+          <li><a href="login.html" class="nav-exit"><span class="exit-icon"><i class="fa-solid fa-arrow-right-to-bracket"></i></span><span class="exit-text">Cerrar sesión</span></a></li>
+        </ul>
+        <div class="nav-right"></div>
+      </nav>
+    </header>
+
+    <main class="perfil">
+      <section class="perfil__info">
+        <div class="perfil__imagen-wrapper">
+          <img
+            class="perfil__info-imagen"
+            src="../assets/img/perfil-placeholder.png"
+            alt="Foto de perfil"
+            id="imagen-usuario"
+          />
+          <div class="perfil__imagen-camara" title="Cambiar foto">
+            <i class="fa-solid fa-camera"></i>
+          </div>
+        </div>
+
+        <div class="perfil__info-header">
+          <h2 class="perfil__info-nombre" id="nombre-usuario">Cargando...</h2>
+          <p class="perfil__info-miembro" id="fecha-registro"></p>
+        </div>
+
+        <hr class="perfil__info-divider">
+
+        <nav class="perfil__menu">
+          <a href="#" id="email-usuario">Cargando email...</a>
+        </nav>
+      </section>
+
+      <section class="perfil__pedidos">
+        <h3 class="perfil__pedidos-titulo">Últimos Pedidos</h3>
+
+        <ul class="perfil__pedidos-lista" id="lista-pedidos">
+           <li>Cargando tus últimos pedidos...</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <img
+          src="../assets/img/logocompleto-test.png"
+          alt="Logo de ImpulsAR"
+          class="logo"
+        />
+        <p id="descripcion-footer">
+          Empresa líder en desarrollo de software a medida. Creamos soluciones
+          innovadoras que impulsan el crecimiento de tu negocio.
+        </p>
+      </div>
+
+      <div>
+        <h3 id="txt-enlacesRapidos">Enlaces Rápidos</h3>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="equipo.html">Equipo</a></li>
+          <li><a href="pedido.html">Pedido</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 id="txt-contacto">Contacto</h3>
+        <p id="txt-email">
+          <i class="fa-solid fa-envelope"></i> info@impulsar.com
+        </p>
+        <p id="txt-telefono">
+          <i class="fa-solid fa-phone"></i> +54 11 1234-5678
+        </p>
+        <address id="txt-direccion">
+          <i class="fa-solid fa-location-dot"></i> Bahia Blanca, Argentina
+        </address>
+        <div class="redes-sociales">
+          <a
+            href="https://www.linkedin.com/home?originalSubdomain=es"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a
+            href="https://github.com/Tincho2319/ProgramacionIII-Practico-1"
+            target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a href="https://x.com/home?lang=es" target="_blank"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+        </div>
+      </div>
+      <p>© 2026 Impulsar. Todos los derechos reservados.</p>
+    </footer>
+    <script src="../js/perfil.js"></script>
+  </body>
+</html>
